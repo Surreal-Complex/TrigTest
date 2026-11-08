@@ -124,3 +124,17 @@ Este protótipo **não atribui automaticamente uma licença ao jogo do grupo** n
 A simulação *Trig Tour* da PhET é indicada apenas por link externo. Sua licença e suas condições devem ser verificadas na página oficial, especialmente conforme a versão utilizada: https://phet.colorado.edu/en/licensing.
 
 O código deste pacote foi preparado para funcionar no navegador sem dependências de terceiros. Não há coleta ou transmissão de respostas do questionário.
+
+## Referência complementar: Mathematics LibreTexts (08/11/2026)
+
+O projeto passa a consultar o repositório educacional **Mathematics LibreTexts** (<https://math.libretexts.org/>) como base bibliográfica complementar para aperfeiçoar as explicações, exemplos e atividades de Trigonometria, especialmente nas páginas:
+
+- **OpenStax. Precalculus 2e — Chapter 5: Trigonometric Functions**: https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_%28OpenStax%29/05%3A_Trigonometric_Functions
+  - Abrange ângulos, círculo, funções trigonométricas, trigonometria do triângulo retângulo e exercícios.
+  - Página identificada como licenciada sob **CC BY 4.0** (consultada em 08/11/2026).
+- **OpenStax. Algebra and Trigonometry 2e — Right Triangle Trigonometry**: https://math.libretexts.org/Workbench/Algebra_and_Trigonometry_2e_%28OpenStax%29/07%3A_The_Unit_Circle_-_Sine_and_Cosine_Functions/7.03%3A_Right_Triangle_Trigonometry
+- **OpenStax. Precalculus 1e — Unit Circle: Sine and Cosine Functions**: https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_1e_%28OpenStax%29/13%3A_Trigonometric_Functions/13.02%3A_Unit_Circle_-_Sine_and_Cosine_Functions
+
+**Uso no projeto:** nesta atualização os materiais são apenas **referenciados por links**, não copiados nem traduzidos. O LibreTexts reúne recursos de autoria e licenças variadas; antes de reutilizar qualquer texto, imagem, exercício ou figura, conferir a licença e os créditos **da página específica**. Ao adaptar, registrar título, autor original, URL, licença e mudanças realizadas. Não atribuir automaticamente a licença de um capítulo a todo o portal.
+
+Esta referência será utilizada no aprofundamento didático dos módulos, mantendo redação, atividades e figuras próprias sempre que possível.
