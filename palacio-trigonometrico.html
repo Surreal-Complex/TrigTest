@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Palácio Trigonométrico</title>
+<style>
+:root{--bg:#f4f0fb;--fg:#241838;--muted:#6f6488;--card:#fff;--line:#ddd2f2;--p1:#6d3fc4;--p2:#b79af0;--p3:#9370e0;--p4:#e6dcf8;--p5:#4a2a8c;--on:#fff;--gold:#e0a100;--ok:#2e7d4f;--bad:#c0392b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17101f;--fg:#efe8fb;--muted:#a99cc4;--card:#221731;--line:#3d2c57;--p1:#a47bf0;--p2:#6d4fb0;--p3:#8a62d6;--p4:#4a3573;--p5:#1a0f2e;--on:#1a0f2e;--gold:#ffc83d;--ok:#6fd08f;--bad:#ff8a7a}}
+:root[data-theme="dark"]{--bg:#17101f;--fg:#efe8fb;--muted:#a99cc4;--card:#221731;--line:#3d2c57;--p1:#a47bf0;--p2:#6d4fb0;--p3:#8a62d6;--p4:#4a3573;--p5:#1a0f2e;--on:#1a0f2e;--gold:#ffc83d;--ok:#6fd08f;--bad:#ff8a7a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:560px;margin:0 auto;padding:16px}
+h1{font-size:1.3rem;margin:0 0 2px;color:var(--p1)}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 12px}
+.hud{display:flex;gap:8px;margin-bottom:10px}
+.hud div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:.8rem;color:var(--muted)}
+.hud b{display:block;font-size:1.1rem;color:var(--fg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px}
+svg{width:100%;height:auto;display:block}
+svg text{font:13px system-ui,sans-serif;fill:var(--fg)}
+.fig{max-width:190px;margin:0 auto}
+.tag{display:inline-block;font-size:.75rem;background:var(--p1);color:var(--on);border-radius:99px;padding:2px 10px;margin-bottom:6px}
+#q{margin:8px 0 10px;line-height:1.5;font-size:1.02rem}
+#opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+button{font:inherit;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:12px;cursor:pointer}
+button:hover{border-color:var(--p1)}
+button.pri{background:var(--p1);color:var(--on);border-color:var(--p1)}
+button.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+button.bad{background:var(--bad);color:#fff;border-color:var(--bad)}
+.row{display:flex;gap:8px;margin-top:8px}.row button{flex:1}
+#info{font-size:.88rem;color:var(--muted);margin-top:8px;line-height:1.4;min-height:1.4em}
+#msg{margin-top:8px;font-size:.92rem;line-height:1.4}
+#end{text-align:center;padding:20px 8px}
+</style>
+</head>
+<body>
+<main>
+<h1>Palácio Trigonométrico</h1>
+<p class="sub">Resolva os desafios de trigonometria e erga o palácio, uma peça de cada vez.</p>
+<div class="hud"><div>Pontos<b id="score">0</b></div><div>Desafio<b id="round">1/12</b></div><div>Obra<b id="hits">0/12</b></div></div>
+<div class="card"><svg id="pal" viewBox="0 0 320 150" role="img" aria-label="Palácio em construção"></svg></div>
+<div class="card" id="game">
+<span class="tag" id="tag"></span>
+<div id="fig"></div>
+<div id="q"></div>
+<div id="opts"></div>
+<div id="info"></div>
+<div id="msg"></div>
+<div class="row"><button id="hb">Dica</button><button class="pri" id="nx" style="display:none">Próximo</button></div>
+</div>
+<div class="card" id="end" style="display:none"></div>
+</main>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var P=function(a){return a[Math.floor(Math.random()*a.length)]};
+var sh=function(a){return a.slice().sort(function(){return Math.random()-.5})};
+var gcd=function(a,b){return b?gcd(b,a%b):Math.abs(a)};
+function fr(n,d){if(d<0){n=-n;d=-d}var g=gcd(n,d);n/=g;d/=g;var s=n<0?'−':'';n=Math.abs(n);return s+(d===1?n:n+'/'+d)}
+function nf(x){return (Math.round(x*100)/100).toString().replace('.',',')+' m'}
+function mk(c,pool){var u=[];pool.forEach(function(x){if(x!==c&&u.indexOf(x)<0)u.push(x)});return sh([c].concat(sh(u).slice(0,3)))}
+var rad=function(d){return d*Math.PI/180};
+var TRI=[[3,4,5],[5,12,13],[8,15,17],[7,24,25],[20,21,29]];
+function tri(){var t=P(TRI);return Math.random()<.5?[t[0],t[1],t[2]]:[t[1],t[0],t[2]]}
+function cfig(a){var r=rad(a),x=100+70*Math.cos(r),y=100-70*Math.sin(r);
+return '<svg viewBox="0 0 200 200" class="fig"><line x1="10" y1="100" x2="190" y2="100" stroke="var(--line)"/><line x1="100" y1="10" x2="100" y2="190" stroke="var(--line)"/><circle cx="100" cy="100" r="70" fill="none" stroke="var(--p1)" stroke-width="2"/><line x1="100" y1="100" x2="'+x+'" y2="'+y+'" stroke="var(--p5)" stroke-width="2"/><line x1="'+x+'" y1="100" x2="'+x+'" y2="'+y+'" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="'+x+'" cy="'+y+'" r="5" fill="var(--p1)"/><text x="'+(x+8)+'" y="'+(y-6)+'">'+a+'°</text></svg>'}
+function tfig(a,b,l){var k=150/Math.max(a,b),w=b*k,h=a*k;
+return '<svg viewBox="0 0 200 200" class="fig"><polygon points="25,175 '+(25+w)+',175 '+(25+w)+','+(175-h)+'" fill="var(--p4)" stroke="var(--p1)" stroke-width="2"/><rect x="'+(25+w-10)+'" y="165" width="10" height="10" fill="none" stroke="var(--p1)"/><text x="40" y="170">'+l+'</text></svg>'}
+var REF={sen:{30:'1/2',45:'√2/2',60:'√3/2'},cos:{30:'√3/2',45:'√2/2',60:'1/2'},tan:{30:'√3/3',45:'1',60:'√3'}};
+function sg(fn,a){var q=a<90?1:a<180?2:a<270?3:4;return fn==='sen'?(q<=2?1:-1):fn==='cos'?((q===1||q===4)?1:-1):((q===1||q===3)?1:-1)}
+function rf(a){return a<=90?a:a<=180?180-a:a<=270?a-180:360-a}
+function gA(){var a=P([30,45,60,120,135,150,210,225,240,300,315,330]),fn=P(['sen','cos','tan']),r=rf(a),s=sg(fn,a);
+var c=(s<0?'−':'')+REF[fn][r],pool=[];[30,45,60].forEach(function(x){['','−'].forEach(function(m){pool.push(m+REF[fn][x])})});
+return{tag:'Círculo trigonométrico',fig:cfig(a),q:'Qual é o valor de '+fn+'('+a+'°)?',ans:c,opts:mk(c,pool),
+hint:'Reduza ao 1º quadrante: o ângulo de referência é '+r+'°. O sinal depende do quadrante do ponto.',
+sol:fn+'('+a+'°) = '+c+' (referência de '+r+'°, sinal pelo quadrante).'}}
+var TB={sen:{15:'(√6−√2)/4',75:'(√6+√2)/4',105:'(√6+√2)/4'},cos:{15:'(√6+√2)/4',75:'(√6−√2)/4',105:'(√2−√6)/4'},tan:{15:'2−√3',75:'2+√3',105:'−2−√3'}};
+var DEC={15:'45° − 30°',75:'45° + 30°',105:'60° + 45°'};
+var FB={sen:'sen(a±b) = sen a·cos b ± sen b·cos a',cos:'cos(a±b) = cos a·cos b ∓ sen a·sen b',tan:'tan(a±b) = (tan a ± tan b)/(1 ∓ tan a·tan b)'};
+function gB(){var a=P([15,75,105]),fn=P(['sen','cos','tan']),c=TB[fn][a];
+var pool=fn==='tan'?['2−√3','2+√3','−2−√3','√3−2']:['(√6+√2)/4','(√6−√2)/4','(√2−√6)/4','−(√6+√2)/4'];
+return{tag:'Soma e diferença de arcos',fig:cfig(a),q:'Use '+a+'° = '+DEC[a]+' para calcular '+fn+'('+a+'°). O arco do portal do palácio tem essa abertura.',ans:c,opts:sh(pool),
+hint:FB[fn],sol:fn+'('+a+'°) = '+c+', usando '+DEC[a]+'.'}}
+function gC(){var t=tri(),a=t[0],b=t[1],h=t[2],fn=P(['sen 2x','cos 2x','tan 2x']),s2=fr(2*a*b,h*h),c2=fr(b*b-a*a,h*h),t2=fr(2*a*b,b*b-a*a);
+var c=fn==='sen 2x'?s2:fn==='cos 2x'?c2:t2,neg=c.charAt(0)==='−'?c.slice(1):'−'+c;
+return{tag:'Arco duplo',fig:tfig(a,b,'x'),q:'Sendo sen x = '+a+'/'+h+' com x agudo (arco da janela), calcule '+fn+'.',ans:c,opts:mk(c,[s2,c2,t2,neg]),
+hint:{'sen 2x':'sen 2x = 2·sen x·cos x','cos 2x':'cos 2x = cos²x − sen²x','tan 2x':'tan 2x = 2·tan x/(1 − tan²x)'}[fn]+'. Primeiro ache cos x = '+b+'/'+h+' pela relação fundamental.',
+sol:'sen x = '+a+'/'+h+', cos x = '+b+'/'+h+' ⇒ '+fn+' = '+c+'.'}}
+function gD(){var t=tri(),a=t[0],b=t[1],h=t[2],fn=P(['sen','cos']),cx=fr(b*b-a*a,h*h),c=fn==='sen'?fr(a,h):fr(b,h);
+return{tag:'Meio-arco',fig:'',q:'Sabendo que cos x = '+cx+' e 0° < x < 180°, calcule '+fn+'(x/2). (Meia-lua da cúpula.)',ans:c,opts:mk(c,[fr(a,h),fr(b,h),fr(a,b),fr(b,a),'−'+c]),
+hint:fn==='sen'?'sen(x/2) = √((1 − cos x)/2), com sinal positivo porque x/2 está no 1º quadrante.':'cos(x/2) = √((1 + cos x)/2), com sinal positivo porque x/2 está no 1º quadrante.',
+sol:fn+'(x/2) = √(('+(fn==='sen'?'1 −':'1 +')+' '+cx+')/2) = '+c+'.'}}
+var IB=[['1 − cos²x','sen²x','sen²x + cos²x = 1'],['1 − sen²x','cos²x','sen²x + cos²x = 1'],['sen x / cos x','tan x','definição de tangente'],['1 + tan²x','sec²x','divida sen²x + cos²x = 1 por cos²x'],['2·sen x·cos x','sen 2x','arco duplo do seno'],['cos²x − sen²x','cos 2x','arco duplo do cosseno'],['2cos²x − 1','cos 2x','cos 2x com sen²x = 1 − cos²x'],['1 − 2sen²x','cos 2x','cos 2x com cos²x = 1 − sen²x'],['(1 − cos 2x)/2','sen²x','meio-arco: isole sen²x em cos 2x = 1 − 2sen²x'],['(1 + cos 2x)/2','cos²x','meio-arco: isole cos²x em cos 2x = 2cos²x − 1'],['(sen x + cos x)² − 1','sen 2x','expanda o quadrado e use sen²x + cos²x = 1'],['1 + cotg²x','cossec²x','divida sen²x + cos²x = 1 por sen²x']];
+var RP=['sen²x','cos²x','tan x','sec²x','sen 2x','cos 2x','cossec²x'];
+function gE(){var it=P(IB);return{tag:'Identidades',fig:'',q:'Simplifique a expressão da viga: '+it[0],ans:it[1],opts:mk(it[1],RP),hint:'Pense em: '+it[2]+'.',sol:it[0]+' = '+it[1]+' ('+it[2]+').'}}
+function gF(){var v=P([1,2,3]);
+if(v===1){var L=P([3,4,5,6]),h=L*(2-Math.sqrt(3)),c=nf(h);
+return{tag:'Obra: telhado',fig:'',q:'Um telhado de duas águas com inclinação de 15° cobre um vão de '+(2*L)+' m. Usando 15° = 45° − 30°, qual a altura da cumeeira?',ans:c,opts:mk(c,[nf(L*Math.tan(rad(30))),nf(L*(2+Math.sqrt(3))),nf(L*Math.sin(rad(15))),nf(L)]),
+hint:'tan 15° = tan(45° − 30°) = (1 − √3/3)/(1 + √3/3) = 2 − √3. A altura é L·tan 15°, com L = metade do vão.',sol:'h = '+L+'·(2 − √3) ≈ '+c+'.'}}
+if(v===2){var t=tri(),a=t[0],b=t[1],hh=t[2],cc=P([10,20,25,50]),s=cc*2*a*b/(hh*hh),c1=nf(s);
+return{tag:'Obra: escora',fig:'',q:'Uma escora de '+cc+' m forma ângulo 2x com o solo, com sen x = '+a+'/'+hh+' (x agudo). A que altura da parede ela chega?',ans:c1,opts:mk(c1,[nf(cc*2*a/hh),nf(cc*(b*b-a*a)/(hh*hh)),nf(cc*a/hh),nf(cc*b/hh)]),
+hint:'Altura = comprimento · sen 2x, e sen 2x = 2·sen x·cos x (cos x = '+b+'/'+hh+').',sol:'h = '+cc+'·2·('+a+'/'+hh+')·('+b+'/'+hh+') = '+c1+'.'}}
+var t2=tri(),a2=Math.min(t2[0],t2[1]),b2=Math.max(t2[0],t2[1]),h2=t2[2],k=P([4,5,10]),d=b2*k,hv=d*a2/b2,c3=nf(hv),ct=fr(b2*b2-a2*a2,h2*h2);
+return{tag:'Obra: torre',fig:'',q:'De um ponto a '+d+' m da base de uma torre, o ângulo de elevação do topo é θ/2, com cos θ = '+ct+' (0° < θ < 180°). Qual a altura da torre?',ans:c3,opts:mk(c3,[nf(d*2*a2*b2/(b2*b2-a2*a2)),nf(d*a2/h2),nf(d*(b2*b2-a2*a2)/(h2*h2)),nf(d*b2/a2)]),
+hint:'Use o meio-arco para achar tan(θ/2) = sen(θ/2)/cos(θ/2) e depois altura = distância · tan(θ/2).',sol:'tan(θ/2) = '+a2+'/'+b2+' ⇒ h = '+d+'·'+a2+'/'+b2+' = '+c3+'.'}}
+var GEN=[gA,gB,gC,gD,gE,gF];
+function arch(x,y,w,h,f){return '<path d="M'+x+' '+(y+h)+' v-'+(h-w/2)+' a'+w/2+' '+w/2+' 0 0 1 '+w+' 0 v'+(h-w/2)+'z" fill="'+f+'"/>'}
+var PAR=[
+'<rect x="30" y="124" width="260" height="8" fill="var(--p3)"/>',
+'<rect x="120" y="70" width="80" height="54" fill="var(--p2)"/>',
+'<rect x="60" y="92" width="60" height="32" fill="var(--p2)"/>',
+'<rect x="200" y="92" width="60" height="32" fill="var(--p2)"/>',
+'<g fill="var(--p4)"><rect x="126" y="70" width="6" height="54"/><rect x="146" y="70" width="6" height="54"/><rect x="168" y="70" width="6" height="54"/><rect x="188" y="70" width="6" height="54"/></g>',
+arch(148,104,24,20,'var(--p5)'),
+arch(76,100,10,14,'var(--p5)')+arch(98,100,10,14,'var(--p5)')+arch(212,100,10,14,'var(--p5)')+arch(234,100,10,14,'var(--p5)'),
+'<rect x="130" y="50" width="60" height="20" fill="var(--p2)"/>'+arch(155,53,10,14,'var(--p5)'),
+'<rect x="62" y="62" width="22" height="30" fill="var(--p3)"/><rect x="236" y="62" width="22" height="30" fill="var(--p3)"/><polygon points="60,62 73,46 86,62" fill="var(--p5)"/><polygon points="234,62 247,46 260,62" fill="var(--p5)"/>',
+'<polygon points="126,50 160,34 194,50" fill="var(--p5)"/>',
+'<path d="M146 38 a14 14 0 0 1 28 0z" fill="var(--p1)"/>',
+'<line x1="160" y1="24" x2="160" y2="8" stroke="var(--fg)" stroke-width="2"/><polygon points="160,8 176,12 160,17" fill="var(--gold)"/>'];
+var N=12,S;
+function paint(){$('pal').innerHTML=PAR.slice(0,S.hits).join('');$('score').textContent=S.score;$('hits').textContent=S.hits+'/'+N;$('round').textContent=Math.min(S.i+1,N)+'/'+N}
+function load(){S.cur=GEN[S.i%6]();S.done=false;S.hint=false;var g=S.cur;
+$('tag').textContent=g.tag;$('fig').innerHTML=g.fig;$('q').textContent=g.q;$('info').textContent='';$('msg').textContent='';$('msg').style.color='';$('nx').style.display='none';$('hb').disabled=false;
+var o=$('opts');o.innerHTML='';g.opts.forEach(function(t){var b=document.createElement('button');b.textContent=t;b.onclick=function(){pick(b,t)};o.appendChild(b)});paint()}
+function pick(b,t){if(S.done)return;S.done=true;var g=S.cur,m=$('msg');$('hb').disabled=true;
+if(t===g.ans){b.className='ok';var p=S.hint?5:10+Math.min(S.streak,5)*2;S.streak++;S.score+=p;S.hits++;m.style.color='var(--ok)';m.textContent='Correto! +'+p+' pontos e uma nova peça no palácio. '+g.sol}
+else{b.className='bad';S.streak=0;Array.prototype.forEach.call($('opts').children,function(x){if(x.textContent===g.ans)x.className='ok'});m.style.color='var(--bad)';m.textContent='Não foi dessa vez. '+g.sol}
+$('nx').style.display='block';$('nx').textContent=S.i+1>=N?'Ver resultado':'Próximo';paint()}
+function end(){$('game').style.display='none';var e=$('end');e.style.display='block';
+var t=S.hits===N?'Palácio concluído! Mestre de obras':S.hits>=9?'Engenheiro(a) civil':S.hits>=6?'Arquiteto(a) pleno(a)':S.hits>=3?'Arquiteto(a) júnior':'Estagiário(a) de obra';
+e.innerHTML='<h2 style="color:var(--p1);margin:0 0 6px">'+t+'</h2><p>'+S.hits+' de '+N+' peças erguidas · '+S.score+' pontos</p><button class="pri" id="rs">Jogar novamente</button>';
+$('rs').onclick=init}
+function init(){S={i:0,score:0,hits:0,streak:0};$('end').style.display='none';$('game').style.display='block';load()}
+$('hb').onclick=function(){if(S.done)return;S.hint=true;$('info').textContent='Dica: '+S.cur.hint};
+$('nx').onclick=function(){S.i++;if(S.i>=N){paint();end()}else load()};
+init();
+})();
+</script>
+</body>
+</html>
