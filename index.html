@@ -1,86 +1,120 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trigonometria Interativa | REA</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f1fc;
-      color: #281a42;
-    }
-    header {
-      background: #56349c;
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
-    main {
-      max-width: 960px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 2px 8px #0001;
-    }
-    a {
-      color: #56349c;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-    }
-  </style>
+  <meta name="description" content="Ambiente educacional para aprender trigonometria: teoria, exploração interativa, exercícios e o jogo Palácio Trigonométrico.">
+  <meta name="theme-color" content="#4e2e84">
+  <title>Trigonometria Interativa | Aprenda, explore e jogue</title>
+  <link rel="stylesheet" href="assets/estilos.css">
+  <script src="assets/interacoes.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Trigonometria Interativa</h1>
-    <p>Aprenda, explore e jogue!</p>
-    <p>Recurso Educacional Aberto de Matemática</p>
-  </header>
-
-  <main>
-    <h2>Bem-vindo!</h2>
-    <p>Este ambiente reúne materiais de estudo,
-    atividades interativas e jogos sobre Trigonometria.</p>
-
-    <div class="cards">
-      <section class="card">
-        <h2>Estudar</h2>
-        <p>Conteúdos e exemplos resolvidos.</p>
-        <p>Em desenvolvimento.</p>
-      </section>
-
-      <section class="card">
-        <h2>Explorar</h2>
-        <p>Simulações e atividades investigativas.</p>
-        <p>Em desenvolvimento.</p>
-      </section>
-
-      <section class="card">
-        <h2>Jogar</h2>
-        <p>Construa seu Palácio Trigonométrico!</p>
-        <a href="palacio-trigonometrico.html">
-          Abrir o jogo
-        </a>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <p>Projeto REA de Trigonometria</p>
-  </footer>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<header class="site-header">
+ <div class="shell nav-shell">
+  <a href="#inicio" class="brand" aria-label="Trigonometria Interativa, início"><span class="brand-icon" aria-hidden="true">∠</span><span>Trigonometria <strong>Interativa</strong></span></a>
+  <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="menuPrincipal" type="button">☰ <span>Menu</span></button>
+  <nav id="menuPrincipal" class="nav" aria-label="Navegação principal">
+   <a href="#estudar">Estudar</a><a href="#explorar">Explorar</a><a href="#atividades">Praticar</a><a href="#jogo">Jogar</a><a href="#professores">Professores</a><a href="#sobre">Sobre o REA</a>
+  </nav>
+ </div>
+</header>
+<main id="conteudo">
+ <section class="hero" id="inicio" aria-labelledby="heroTitle">
+  <div class="shell hero-grid">
+   <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> Recurso educacional para o Ensino Médio</div>
+    <h1 id="heroTitle">A matemática dos ângulos está em toda parte.</h1>
+    <p class="lead">Aprenda trigonometria passo a passo. Entenda os conceitos, manipule representações, resolva desafios e construa seu próprio Palácio Trigonométrico.</p>
+    <div class="hero-cta"><a class="btn btn-primary" href="#estudar">Começar a estudar <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="palacio-trigonometrico.html">Abrir o jogo ↗</a></div>
+    <div class="hero-meta"><span>✓ Acesso gratuito</span><span>✓ Sem cadastro</span><span>✓ Funciona no celular</span></div>
+   </div>
+   <div class="hero-visual" aria-hidden="true">
+    <div class="figure-label">TRIGONOMETRIA EM MOVIMENTO</div>
+    <svg viewBox="0 0 400 330" role="presentation"><defs><linearGradient id="circ" x1="0" x2="1"><stop stop-color="#8f78d6"/><stop offset="1" stop-color="#ecbe87"/></linearGradient></defs>
+    <g transform="translate(200,168)"><circle r="117" fill="none" stroke="#e0d5f2" stroke-width="1" stroke-dasharray="4 6"/><circle r="94" fill="none" stroke="url(#circ)" stroke-width="4"/>
+    <line x1="-146" y1="0" x2="146" y2="0" stroke="#b7acd1" stroke-width="1.6"/><line x1="0" y1="-135" x2="0" y2="135" stroke="#b7acd1" stroke-width="1.6"/>
+    <path d="M0 0 L66.5 -66.5 L66.5 0 Z" fill="#eadff7" opacity="0.75"/><path d="M66.5 -66.5 V0" stroke="#d99258" stroke-dasharray="5 4" stroke-width="2"/>
+    <path d="M0 0 L66.5 -66.5" stroke="#5c3694" stroke-width="4" stroke-linecap="round"/><circle cx="66.5" cy="-66.5" r="7" fill="#d99258" stroke="white" stroke-width="3"/><path d="M26 0 A26 26 0 0 0 18.4 -18.4" fill="none" stroke="#d99258" stroke-width="2.5"/>
+    <text x="-11" y="-114" fill="#66527e" font-size="14">sen</text><text x="126" y="-9" fill="#66527e" font-size="14">cos</text><text x="32" y="-12" fill="#b66f38" font-size="13">45°</text></g></svg>
+    <div class="figure-pill pill-a">sen(45°) = √2/2</div><div class="figure-pill pill-b">cos(45°) = √2/2</div>
+   </div>
+  </div>
+ </section>
+ <section class="section intro" id="estudar" aria-labelledby="studyTitle">
+  <div class="shell">
+   <div class="section-heading"><div><div class="kicker">01 / ESTUDAR</div><h2 id="studyTitle">Sua trilha de aprendizagem</h2><p>Comece pelos fundamentos e avance até as aplicações. Os conteúdos mais avançados podem ser estudados depois.</p></div><div class="section-indicator">5 módulos</div></div>
+   <div class="module-grid">
+    <article class="module-card"><div class="module-top"><span class="module-no">01</span><span class="level">Fundamentos</span></div><h3>Triângulo retângulo</h3><p>Catetos, hipotenusa, graus, radianos e as razões seno, cosseno e tangente.</p><a href="#modulo1" class="text-link">Ler este módulo <span aria-hidden="true">→</span></a></article>
+    <article class="module-card"><div class="module-top"><span class="module-no">02</span><span class="level">Fundamentos</span></div><h3>Círculo trigonométrico</h3><p>Quadrantes, ângulos notáveis, sinais e interpretação geométrica.</p><a href="#modulo2" class="text-link">Ler este módulo <span aria-hidden="true">→</span></a></article>
+    <article class="module-card"><div class="module-top"><span class="module-no">03</span><span class="level">Intermediário</span></div><h3>Funções trigonométricas</h3><p>Gráficos, amplitude, período e comportamento de seno e cosseno.</p><a href="#modulo3" class="text-link">Ler este módulo <span aria-hidden="true">→</span></a></article>
+    <article class="module-card"><div class="module-top"><span class="module-no">04</span><span class="level">Avançado</span></div><h3>Identidades e arcos</h3><p>Relação fundamental, soma e diferença, arco duplo e meio-arco.</p><a href="#modulo4" class="text-link">Ler este módulo <span aria-hidden="true">→</span></a></article>
+    <article class="module-card"><div class="module-top"><span class="module-no">05</span><span class="level">Aplicações</span></div><h3>Trigonometria na prática</h3><p>Como calcular alturas, distâncias e inclinações com problemas contextualizados.</p><a href="#modulo5" class="text-link">Ler este módulo <span aria-hidden="true">→</span></a></article>
+   </div>
+   <div class="lessons">
+    <article class="lesson" id="modulo1">
+     <div class="lesson-marker">MÓDULO 01 · FUNDAMENTOS</div><h3>Razões trigonométricas no triângulo retângulo</h3>
+     <p>Um triângulo retângulo possui um ângulo de 90°. O lado oposto a esse ângulo é a <strong>hipotenusa</strong>; os outros lados são os <strong>catetos</strong>. Para um ângulo agudo θ, um cateto será oposto ou adjacente, dependendo de sua posição.</p>
+     <div class="content-columns"><div class="math-panel" aria-label="Representação das razões trigonométricas"><div><span class="formula-title">Seno</span><div class="math-formula">sen θ = oposto / hipotenusa</div></div><div><span class="formula-title">Cosseno</span><div class="math-formula">cos θ = adjacente / hipotenusa</div></div><div><span class="formula-title">Tangente</span><div class="math-formula">tg θ = oposto / adjacente</div></div></div><div class="triangle-panel"><svg viewBox="0 0 360 240" role="img" aria-labelledby="triangleTitle triangleDesc"><title id="triangleTitle">Triângulo retângulo com lados 3, 4 e 5</title><desc id="triangleDesc">Triângulo de vértices A à esquerda embaixo, B à direita embaixo e C à direita em cima. O cateto adjacente a theta mede 4, o oposto mede 3 e a hipotenusa mede 5.</desc><polygon points="45,195 285,195 285,15" fill="#f0e9fb" stroke="#7854bc" stroke-width="3"/><path d="M265 195 v-20 h20" fill="none" stroke="#7854bc" stroke-width="2"/><path d="M85 195 A40 40 0 0 0 79.6 174.9" stroke="#d89251" stroke-width="3" fill="none"/><text x="87" y="184" font-size="17" fill="#a45d28">θ</text><text x="172" y="218" font-size="16">4 (adjacente)</text><text x="292" y="118" font-size="16">3</text><text x="153" y="104" font-size="16">5</text><text x="30" y="212">A</text><text x="290" y="212">B</text><text x="290" y="13">C</text></svg><p class="diagram-caption">Em relação a θ: sen θ = 3/5, cos θ = 4/5 e tg θ = 3/4.</p></div></div>
+     <p><strong>Graus e radianos:</strong> 180° corresponde a π radianos. Para converter graus em radianos, multiplique por π/180; para o caminho inverso, multiplique por 180/π.</p>
+     <div class="worked"><strong>Exemplo resolvido:</strong> uma escada de 5 m encostada numa parede forma um triângulo retângulo cuja base mede 4 m. Pelo Teorema de Pitágoras, a altura é √(5² − 4²) = √9 = <strong>3 m</strong>.</div>
+    </article>
+    <article class="lesson" id="modulo2"><div class="lesson-marker">MÓDULO 02 · CÍRCULO</div><h3>Círculo trigonométrico</h3><p>No círculo de raio 1, cada ângulo θ corresponde a um ponto de coordenadas <strong>(cos θ, sen θ)</strong>. O valor do cosseno corresponde à coordenada horizontal e o seno à vertical. O quadrante ajuda a determinar o sinal de cada valor.</p>
+     <div class="table-wrap"><table><caption>Valores de ângulos notáveis no 1º quadrante</caption><thead><tr><th scope="col">Ângulo</th><th scope="col">sen</th><th scope="col">cos</th><th scope="col">tg</th></tr></thead><tbody><tr><th scope="row">30°</th><td>1/2</td><td>√3/2</td><td>√3/3</td></tr><tr><th scope="row">45°</th><td>√2/2</td><td>√2/2</td><td>1</td></tr><tr><th scope="row">60°</th><td>√3/2</td><td>1/2</td><td>√3</td></tr></tbody></table></div>
+     <p>O seno é positivo no 1º e 2º quadrantes, e o cosseno é positivo no 1º e 4º. A tangente é positiva no 1º e 3º. Nos eixos, alguns valores são nulos, e a tangente não existe quando cos θ = 0.</p>
+     <div class="worked"><strong>Exemplo resolvido:</strong> o ângulo 150° está no 2º quadrante e tem ângulo de referência 30°. Assim, sen 150° = 1/2 e cos 150° = −√3/2.</div>
+    </article>
+    <article class="lesson" id="modulo3"><div class="lesson-marker">MÓDULO 03 · FUNÇÕES</div><h3>Gráficos de seno e cosseno</h3><p>As funções f(x) = sen x e g(x) = cos x são periódicas: repetem seus valores a cada <strong>2π radianos (360°)</strong>. Seus valores variam entre −1 e 1. Para f(x) = A sen(Bx), a amplitude é |A| e, se B ≠ 0, o período é 2π/|B|.</p>
+     <div class="worked"><strong>Exemplo resolvido:</strong> a função f(x) = 2 sen(2x) possui amplitude 2 e período π, pois 2π/2 = π.</div>
+     <p>Explore abaixo como a amplitude altera a altura das ondas e como o parâmetro B altera o número de oscilações no mesmo intervalo.</p>
+    </article>
+    <article class="lesson" id="modulo4"><div class="lesson-marker">MÓDULO 04 · APROFUNDAMENTO</div><h3>Identidades e relações entre arcos</h3><p>As identidades trigonométricas são igualdades válidas para todos os ângulos de seus domínios. Elas permitem transformar expressões e encontrar novos valores.</p>
+     <div class="formula-stack"><div><strong>Relação fundamental</strong><p>sen²x + cos²x = 1</p></div><div><strong>Soma de arcos</strong><p>sen(a + b) = sen a · cos b + cos a · sen b</p></div><div><strong>Arco duplo</strong><p>sen(2x) = 2 sen x · cos x</p><p>cos(2x) = cos²x − sen²x</p></div><div><strong>Meio-arco (sinais dependem do quadrante)</strong><p>sen²(x/2) = (1 − cos x)/2</p><p>cos²(x/2) = (1 + cos x)/2</p></div></div>
+     <div class="worked"><strong>Exemplo resolvido:</strong> se sen x = 3/5 e cos x = 4/5, então sen(2x) = 2 · 3/5 · 4/5 = <strong>24/25</strong>.</div>
+    </article>
+    <article class="lesson" id="modulo5"><div class="lesson-marker">MÓDULO 05 · APLICAÇÕES</div><h3>Alturas, distâncias e inclinações</h3><p>Quando conhecemos uma distância horizontal e um ângulo de elevação, podemos usar a tangente para calcular a altura de uma estrutura, desde que a situação seja representada por um triângulo retângulo.</p>
+     <div class="worked"><strong>Exemplo resolvido:</strong> de um ponto situado a 10 m da base de uma torre, observa-se o topo sob ângulo de 30° com o solo horizontal. A altura, medida a partir do mesmo nível, é h = 10 · tg 30° = 10√3/3 ≈ <strong>5,77 m</strong>.</div><p>Na prática, avalie se o terreno é plano e se a medida do ângulo foi realizada na mesma altura da base considerada.</p>
+    </article>
+   </div>
+  </div>
+ </section>
+ <section class="section explore-section" id="explorar" aria-labelledby="exploreTitle"><div class="shell">
+  <div class="section-heading"><div><div class="kicker">02 / EXPLORAR</div><h2 id="exploreTitle">Laboratório de trigonometria</h2><p>Manipule os valores e observe o que muda. Use as perguntas para orientar a investigação.</p></div></div>
+  <div class="lab-grid">
+   <article class="lab-card"><div class="lab-head"><div><span class="mini-tag">INTERATIVO</span><h3>Círculo trigonométrico</h3></div><span class="lab-symbol" aria-hidden="true">◉</span></div>
+    <p>Mova o ângulo e compare as coordenadas do ponto com os valores de seno e cosseno.</p>
+    <div class="input-row"><label for="angleRange">Ângulo θ</label><output id="angleOutput" for="angleRange">45°</output></div>
+    <input type="range" id="angleRange" min="0" max="360" step="1" value="45">
+    <svg id="unitCircle" viewBox="0 0 340 300" role="img" aria-label="Círculo trigonométrico interativo de raio um, com ângulo e projeções de seno e cosseno"><line x1="22" y1="150" x2="318" y2="150" stroke="#9484ad" stroke-width="1.5"/><line x1="170" y1="16" x2="170" y2="284" stroke="#9484ad" stroke-width="1.5"/><circle cx="170" cy="150" r="113" fill="none" stroke="#b3a0d7" stroke-width="2"/><line id="cosProjection" x1="170" y1="150" x2="250" y2="150" stroke="#5f54af" stroke-width="5"/><line id="sinProjection" x1="250" y1="150" x2="250" y2="70" stroke="#d38c56" stroke-width="5"/><line id="radiusLine" x1="170" y1="150" x2="250" y2="70" stroke="#4e2e84" stroke-width="3"/><circle id="anglePoint" cx="250" cy="70" r="7" fill="#4e2e84" stroke="white" stroke-width="2"/><text x="321" y="145" font-size="13">x</text><text x="179" y="19" font-size="13">y</text><text x="277" y="42" font-size="12" fill="#6d568f">r = 1</text></svg>
+    <div class="values" role="status" aria-live="polite"><span>sen θ <strong id="sinValue">0,707</strong></span><span>cos θ <strong id="cosValue">0,707</strong></span><span>Quadrante <strong id="quadrantValue">I</strong></span></div>
+    <p class="investigation"><strong>Investigue:</strong> em quais quadrantes o seno é negativo? O que acontece com o cosseno em 90° e 270°?</p>
+   </article>
+   <article class="lab-card"><div class="lab-head"><div><span class="mini-tag">INTERATIVO</span><h3>Transformações no gráfico</h3></div><span class="lab-symbol" aria-hidden="true">∿</span></div><p>Observe a função <strong>f(x) = A · sen(Bx)</strong> no intervalo de 0 a 2π.</p>
+    <div class="input-row"><label for="amplitudeRange">Amplitude A</label><output id="amplitudeOutput" for="amplitudeRange">1</output></div><input id="amplitudeRange" type="range" min="1" max="3" step="0.5" value="1">
+    <div class="input-row"><label for="frequencyRange">Parâmetro B</label><output id="frequencyOutput" for="frequencyRange">1</output></div><input id="frequencyRange" type="range" min="1" max="3" step="1" value="1">
+    <svg id="sineGraph" viewBox="0 0 420 250" role="img" aria-label="Gráfico interativo da função seno com controles de amplitude e período"><line x1="38" y1="125" x2="405" y2="125" stroke="#9688ab" stroke-width="1.5"/><line x1="38" y1="18" x2="38" y2="232" stroke="#9688ab" stroke-width="1.5"/><line x1="38" y1="37" x2="405" y2="37" stroke="#e4dbed" stroke-dasharray="4 5"/><line x1="38" y1="213" x2="405" y2="213" stroke="#e4dbed" stroke-dasharray="4 5"/><text x="33" y="143" font-size="12">0</text><text x="218" y="143" font-size="12">π</text><text x="390" y="143" font-size="12">2π</text><path id="sinePath" d="" fill="none" stroke="#6845a6" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    <div class="values"><span>Amplitude <strong id="ampValue">1</strong></span><span>Período <strong id="periodValue">2π</strong></span></div>
+    <p class="investigation"><strong>Investigue:</strong> mudar A altera o período? O que acontece com o número de ondas ao aumentar B?</p>
+   </article>
+  </div>
+  <div class="source-box"><div><strong>Explore também o Trig Tour, da PhET</strong><p>Uma simulação externa para investigar o círculo e as funções trigonométricas. Este site fornece apenas um link: a simulação não faz parte do pacote.</p></div><a href="https://phet.colorado.edu/en/simulations/trig-tour" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Abrir PhET ↗</a></div>
+ </div></section>
+ <section class="section" id="atividades" aria-labelledby="activityTitle"><div class="shell"><div class="section-heading"><div><div class="kicker">03 / PRATICAR</div><h2 id="activityTitle">Confira o que aprendeu</h2><p>Responda às questões. Ao finalizar, você verá a pontuação e explicações para revisar seus conhecimentos.</p></div><div class="section-indicator">6 questões</div></div>
+ <form id="quizForm" class="quiz" novalidate>
+  <fieldset><legend><span class="q-number">01</span> Em um triângulo retângulo, em relação a θ, o seno é:</legend><label><input type="radio" name="q1" value="a"> cateto adjacente / hipotenusa</label><label><input type="radio" name="q1" value="b"> cateto oposto / hipotenusa</label><label><input type="radio" name="q1" value="c"> cateto oposto / adjacente</label><p class="answer-feedback" id="feedback-q1" aria-live="polite"></p></fieldset>
+  <fieldset><legend><span class="q-number">02</span> Quanto vale sen(30°)?</legend><label><input type="radio" name="q2" value="a"> 1/2</label><label><input type="radio" name="q2" value="b"> √3/2</label><label><input type="radio" name="q2" value="c"> 1</label><p class="answer-feedback" id="feedback-q2" aria-live="polite"></p></fieldset>
+  <fieldset><legend><span class="q-number">03</span> Qual é o sinal de cos(150°)?</legend><label><input type="radio" name="q3" value="a"> Positivo</label><label><input type="radio" name="q3" value="b"> Nulo</label><label><input type="radio" name="q3" value="c"> Negativo</label><p class="answer-feedback" id="feedback-q3" aria-live="polite"></p></fieldset>
+  <fieldset><legend><span class="q-number">04</span> Qual é o período de f(x) = sen(2x)?</legend><label><input type="radio" name="q4" value="a"> π</label><label><input type="radio" name="q4" value="b"> 2π</label><label><input type="radio" name="q4" value="c"> 4π</label><p class="answer-feedback" id="feedback-q4" aria-live="polite"></p></fieldset>
+  <fieldset><legend><span class="q-number">05</span> Se sen x = 3/5 e cos x = 4/5, quanto vale sen(2x)?</legend><label><input type="radio" name="q5" value="a"> 7/10</label><label><input type="radio" name="q5" value="b"> 12/25</label><label><input type="radio" name="q5" value="c"> 24/25</label><p class="answer-feedback" id="feedback-q5" aria-live="polite"></p></fieldset>
+  <fieldset><legend><span class="q-number">06</span> Uma torre é observada a 10 m de sua base, com ângulo de elevação de 45°, num terreno plano. Qual é a altura acima do nível de observação?</legend><label><input type="radio" name="q6" value="a"> 5 m</label><label><input type="radio" name="q6" value="b"> 10 m</label><label><input type="radio" name="q6" value="c"> 20 m</label><p class="answer-feedback" id="feedback-q6" aria-live="polite"></p></fieldset>
+  <div class="quiz-actions"><button type="submit" class="btn btn-primary">Corrigir respostas</button><button type="reset" class="btn btn-secondary">Refazer atividade</button></div>
+  <div id="quizResult" class="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
+ </form></div></section>
+ <section class="section game-section" id="jogo" aria-labelledby="gameTitle"><div class="shell game-banner"><div><div class="kicker light">04 / JOGAR</div><h2 id="gameTitle">Palácio Trigonométrico</h2><p>Resolva desafios de trigonometria e construa um palácio, peça por peça. Há perguntas sobre círculo trigonométrico, identidades, arcos e aplicações.</p><p class="game-caution">É recomendado concluir os módulos 1 a 4 antes de jogar, pois algumas questões exigem conhecimentos avançados.</p><a class="btn btn-gold" href="palacio-trigonometrico.html">Começar o jogo <span aria-hidden="true">↗</span></a></div><div class="palace-preview" aria-hidden="true"><svg viewBox="0 0 320 220"><rect x="22" y="172" width="276" height="12" rx="3" fill="#bca4e8"/><rect x="106" y="100" width="108" height="72" fill="#d8c5f2"/><rect x="45" y="133" width="61" height="39" fill="#bda1eb"/><rect x="214" y="133" width="61" height="39" fill="#bda1eb"/><path d="M103 100 L160 65 217 100 Z" fill="#ad8add"/><rect x="135" y="141" width="50" height="31" rx="23" fill="#58348b"/><rect x="60" y="95" width="33" height="38" fill="#d8c5f2"/><path d="M53 95 L76 66 100 95 Z" fill="#ad8add"/><rect x="225" y="95" width="33" height="38" fill="#d8c5f2"/><path d="M218 95 L242 66 265 95 Z" fill="#ad8add"/><path d="M141 65 Q160 24 179 65" fill="#eee6ff"/><path d="M160 40 L160 16 L179 22 L160 27" fill="#e8be6f"/><g fill="#8c6bc0"><rect x="118" y="115" width="10" height="21" rx="5"/><rect x="191" y="115" width="10" height="21" rx="5"/><rect x="64" y="140" width="13" height="18" rx="6"/><rect x="245" y="140" width="13" height="18" rx="6"/></g></svg></div></div></section>
+ <section class="section teacher-section" id="professores" aria-labelledby="teacherTitle"><div class="shell"><div class="section-heading"><div><div class="kicker">05 / PARA PROFESSORES</div><h2 id="teacherTitle">Como utilizar este material em aula</h2><p>Uma possibilidade de sequência didática para orientar a mediação docente.</p></div></div><div class="teacher-grid"><div class="teacher-step"><span>1ª aula · 50 min</span><h3>Introduzir e explorar</h3><p>Retomar as razões trigonométricas; apresentar a associação do círculo unitário com as coordenadas; realizar perguntas orientadoras com a primeira simulação.</p></div><div class="teacher-step"><span>2ª aula · 50 min</span><h3>Investigar e avaliar</h3><p>Explorar os gráficos, discutir amplitude e período, aplicar as seis questões de revisão e utilizar o jogo após o estudo dos tópicos correspondentes.</p></div></div><div class="tip"><strong>Adaptação pedagógica:</strong> para turmas que ainda não estudaram identidades e meio-arco, use apenas os módulos iniciais, as simulações e o questionário. O Palácio Trigonométrico contém desafios mais avançados.</div></div></section>
+ <section class="section about-section" id="sobre" aria-labelledby="aboutTitle"><div class="shell"><div class="section-heading"><div><div class="kicker">06 / SOBRE ESTE REA</div><h2 id="aboutTitle">Autoria, fontes e licenciamento</h2><p>Para ser um REA, é importante explicitar o que pode ser utilizado, modificado e redistribuído.</p></div></div><div class="about-grid"><div class="about-card"><h3>Identificação do projeto</h3><dl><dt>Título</dt><dd>Trigonometria Interativa — Aprenda, explore e jogue</dd><dt>Área</dt><dd>Matemática · Trigonometria</dd><dt>Público-alvo</dt><dd>Estudantes do Ensino Médio</dd><dt>Finalidade</dt><dd>Aprendizagem conceitual, investigação, prática e revisão</dd><dt>Autores do projeto</dt><dd>Jessica Camily Hildebrandt e Peterson Luiz do Nascimento da Silva (conforme os documentos da disciplina; confirmar créditos finais)</dd></dl></div><div class="about-card"><h3>Licenças e materiais de terceiros</h3><p><strong>Material original do site e jogo:</strong> é necessário que os autores confirmem a titularidade e a licença aberta antes de declararem a versão final como REA. Uma opção sugerida para os textos e atividades é CC BY 4.0.</p><p><strong>PhET Trig Tour:</strong> está indicado como recurso externo. A licença do PhET deve ser consultada para a versão específica da simulação, e o link não transfere a licença ao material deste site.</p><p><strong>Adaptações:</strong> este protótipo integra explicações originais, representações interativas, exercícios e o jogo HTML fornecido pelo grupo.</p><p><a href="https://phet.colorado.edu/en/licensing" target="_blank" rel="noopener noreferrer">Licenciamento PhET ↗</a> · <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br" target="_blank" rel="noopener noreferrer">Sobre CC BY 4.0 ↗</a></p></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="shell footer-shell"><div><strong>Trigonometria Interativa</strong><p>Um ambiente de estudo que une conceitos, exploração e jogo.</p></div><div><a href="#inicio">Voltar ao topo ↑</a><span>Produção educacional · 2026</span></div></div></footer>
 </body>
 </html>
