@@ -56,3 +56,26 @@ Antes de divulgar este projeto como REA finalizado, confirmem a titularidade dos
 - Testes de navegação e acessibilidade no computador e no celular.
 - Conclusão das fichas de autoria, referências e licenciamento.
 - Integração desta branch à versão pública quando aprovada.
+
+## Ampliação da biblioteca — novembro de 2026
+
+A branch agora contém uma seção de **biblioteca ampliada**, integrada à página inicial, com os seguintes novos caminhos:
+
+- `conteudos/index.html` — índice dos cinco capítulos.
+- `conteudos/fundamentos.html` — ângulos, triângulos, seno, cosseno, tangente e radianos.
+- `conteudos/circulo.html` — quadrantes, ângulos de referência e sinais.
+- `conteudos/funcoes.html` — funções seno, cosseno e tangente, amplitude e período.
+- `conteudos/identidades.html` — relação fundamental, soma de arcos, arco duplo e meio-arco.
+- `conteudos/aplicacoes.html` — alturas, distâncias, inclinações e leis dos senos e dos cossenos.
+- `conteudos/estilo.css` — estilo compartilhado dos capítulos.
+- `jogos/missao-quadrantes.html` — jogo com níveis, oito desafios, dicas, pontuação e comentários.
+- `materiais/lista-exercicios.html` — 15 questões comentadas com opção de impressão em PDF.
+- `materiais/roteiro-investigativo.html` — sequência de dois encontros com avaliação e mediação.
+
+### Próximas melhorias propostas
+1. Expandir cada capítulo com mais representações visuais e sequências graduais.
+2. Melhorar a acessibilidade de todos os SVGs e controles.
+3. Oferecer mais questões por tópico, com soluções que mostrem estratégias alternativas.
+4. Revisar as respostas do novo jogo e testar em navegadores diferentes.
+5. Verificar autoria, licenças e referências antes da entrega final do REA.
+6. Integrar a branch à `main` depois da revisão, sem perder o histórico.
