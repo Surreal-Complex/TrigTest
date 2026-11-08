@@ -1,140 +1,180 @@
-# Trigonometria Interativa — REA
+# Trigonometria Interativa — Recurso Educacional Aberto (REA)
 
-Ambiente educacional de Trigonometria para estudantes do Ensino Médio, com uma sequência de estudo, exploração visual, atividades e jogo digital.
+Projeto educacional de Trigonometria para o Ensino Médio, com estudo, exploração interativa, treino, jogos e espaço para materiais didáticos produzidos pelo grupo.
 
-> **Status:** versão de desenvolvimento na branch `rea-materiais-interativos`. Esta versão ainda não substitui a publicada pela branch `main`.
+## Estrutura do site — edição por abas
 
-## Conteúdo desta branch
+A versão reorganizada tem **sete entradas principais** na navegação superior:
 
-- **`index.html`** — página inicial e trilha com cinco módulos:
-  1. Razões trigonométricas no triângulo retângulo;
-  2. Círculo trigonométrico;
-  3. Funções seno e cosseno;
-  4. Identidades, operações com arcos e meio-arco;
-  5. Aplicações de alturas e distâncias.
-- Dois laboratórios interativos no mesmo HTML: círculo trigonométrico e gráfico da função seno com controles de amplitude e período.
-- Questionário com seis questões e comentários explicativos.
-- Orientações iniciais para professores.
-- **`palacio-trigonometrico.html`** — jogo original do grupo com doze desafios.
+1. **Página Inicial** — `index.html`. Apresentação visual, atalhos para todas as áreas e destaque para o Palácio.
+2. **Estudar** — `estudar/index.html`. Introdução, finalidade, mapa com dez eixos temáticos, métodos de estudo e glossário, com guias recolhíveis.
+3. **Explorar** — `explorar/index.html`. Laboratórios de círculo unitário, gráfico transformável de seno e conversão de unidades; aprofundamentos, curiosidades e fontes externas.
+4. **Praticar** — `praticar/index.html`. Questões comentadas, treino interativo por dificuldade, espaço para PDFs, listas, avaliações e desafios.
+5. **Jogar** — `jogar/index.html`. Apresentação visual específica de cada jogo, regras e orientações.
+6. **Professores** — `professores/index.html`. Planos de aula, estratégias, questões de aplicação, avaliação, recursos e inclusão.
+7. **Sobre** — `sobre/index.html`. Projeto, autores, créditos, referências, licenças, informações legais e campos pendentes marcados como `@@@@`.
 
-O arquivo `index.html` desta branch **inclui CSS e JavaScript internamente**. Portanto, não depende de `assets/estilos.css` ou `assets/interacoes.js`; essa é uma diferença em relação à organização atual da `main`.
+Os **links da navegação principal** estão no cabeçalho de cada uma dessas páginas. As **sub-abas** são atalhos para seções dentro da página e os **guias recolhíveis** usam o elemento HTML `<details>`.
 
-## Testar a versão
+### Estrutura de arquivos atual
 
-1. No GitHub, selecione a branch **`rea-materiais-interativos`**.
-2. Abra o arquivo `index.html` no editor ou baixe o repositório em ZIP nessa branch.
-3. Para executar localmente, mantenha `index.html` e `palacio-trigonometrico.html` na mesma pasta.
-4. Abra `index.html` em um navegador.
-5. Confira os links de navegação, o ajuste do ângulo no círculo, a amplitude e a frequência do gráfico, as seis questões e o link que abre o jogo.
+```text
+TrigTest/
+├── index.html                         Página Inicial
+├── assets/
+│   ├── rea.css                        Visual roxo, menus e responsividade
+│   └── rea.js                         Menu móvel, laboratórios e treino
+├── estudar/
+│   └── index.html
+├── explorar/
+│   └── index.html
+├── praticar/
+│   └── index.html
+├── jogar/
+│   └── index.html
+├── professores/
+│   └── index.html
+├── sobre/
+│   └── index.html
+├── conteudos/
+│   ├── index.html                     Biblioteca existente
+│   ├── fundamentos.html
+│   ├── circulo.html
+│   ├── funcoes.html
+│   ├── identidades.html
+│   ├── aplicacoes.html
+│   └── estilo.css
+├── jogos/
+│   └── missao-quadrantes.html
+├── palacio-trigonometrico.html
+└── materiais/
+    ├── lista-exercicios.html
+    └── roteiro-investigativo.html
+```
 
-**Publicação:** o GitHub Pages do projeto atualmente usa a branch `main`. Para colocar esta versão no ar, primeiro revise e integre as alterações por meio do [pull request #1](https://github.com/Surreal-Complex/TrigTest/pull/1), observando eventuais conflitos com alterações posteriores da `main`.
+Arquivos anteriores `estilos.css` e `interacoes.js` na raiz foram mantidos para preservar o histórico, mas **não são utilizados pelas sete novas páginas**.
 
-## Proposta pedagógica
+## Como acrescentar os PDFs depois
 
-**Público-alvo:** Ensino Médio, com revisão dos conhecimentos necessários sobre triângulos e razões trigonométricas.
+**Os PDFs futuros ainda não foram criados nem vinculados**. Por isso, o site apresenta apenas avisos de material em preparação, sem links quebrados.
 
-**Objetivo:** apoiar a compreensão de conceitos de Trigonometria por uma sequência de explicações, investigação de representações, prática com feedback e resolução de desafios.
+### 1. Prepare os arquivos
 
-**Fluxo sugerido:** Estudar → Explorar → Praticar → Jogar → Retomar conceitos.
+Organize localmente os materiais teóricos, listas, avaliações, roteiros e gabaritos que produzir. Exemplo de destino **sugerido**, não de arquivos já existentes:
 
-## Autoria e créditos
+```text
+materiais/
+└── pdfs/
+    ├── teoria/
+    │   ├── fundamentos.pdf
+    │   ├── circulo-trigonometrico.pdf
+    │   ├── funcoes-trigonometricas.pdf
+    │   ├── identidades.pdf
+    │   └── aplicacoes.pdf
+    ├── listas/
+    │   ├── lista-fundamentos.pdf
+    │   ├── lista-circulo.pdf
+    │   └── lista-funcoes.pdf
+    ├── avaliacoes/
+    │   └── avaliacao-diagnostica.pdf
+    └── professores/
+        └── plano-de-aula-01.pdf
+```
 
-Os documentos originais da atividade indicam Jessica Camily Hildebrandt e Peterson Luiz do Nascimento da Silva como integrantes do grupo; a identificação do produto final deve ser confirmada pelos autores.
+Use nomes de arquivo sem espaço e com hífens, para facilitar as URLs.
 
-O site inclui um link para a simulação **Trig Tour**, da PhET Interactive Simulations, Universidade do Colorado Boulder. O material externo não é redistribuído como parte deste repositório.
+### 2. Envie para o repositório
 
-- [Trig Tour](https://phet.colorado.edu/en/simulations/trig-tour)
-- [Licenciamento oficial da PhET](https://phet.colorado.edu/en/licensing)
+No GitHub, abra o repositório, selecione a branch `main` (após a integração da versão) e use **Add file → Upload files**. Envie os documentos para os caminhos acima; crie primeiro as pastas se necessário. Faça **Commit changes**.
 
-## Licença — decisão pendente
+### 3. Coloque os links no site
 
-Antes de divulgar este projeto como REA finalizado, confirmem a titularidade dos textos, figuras, código e jogo, e indiquem uma licença aberta aplicável a cada componente autoral. Uma opção a considerar é CC BY 4.0. Recursos de terceiros devem conservar suas próprias licenças e atribuições.
+Abra `praticar/index.html` para acrescentar listas e avaliações, `estudar/index.html` para materiais teóricos, ou `professores/index.html` para roteiros. Substitua o texto do cartão "material em preparação" pelo link do PDF. Exemplo, a partir de `praticar/index.html`:
 
-## Próximas validações
+```html
+<a href="../materiais/pdfs/listas/lista-fundamentos.pdf" target="_blank" rel="noopener noreferrer">
+  Abrir lista de fundamentos em PDF
+</a>
+```
 
-- Revisão matemática e pedagógica dos conteúdos e respostas.
-- Testes de navegação e acessibilidade no computador e no celular.
-- Conclusão das fichas de autoria, referências e licenciamento.
-- Integração desta branch à versão pública quando aprovada.
+Para o mesmo arquivo, a partir de `index.html` na raiz, use:
 
-## Ampliação da biblioteca — novembro de 2026
+```html
+<a href="materiais/pdfs/listas/lista-fundamentos.pdf">Lista de fundamentos</a>
+```
 
-A branch agora contém uma seção de **biblioteca ampliada**, integrada à página inicial, com os seguintes novos caminhos:
+Para incluir o link em `materiais/lista-exercicios.html`, use `pdfs/listas/lista-fundamentos.pdf` porque a página está dentro da pasta `materiais/`.
 
-- `conteudos/index.html` — índice dos cinco capítulos.
-- `conteudos/fundamentos.html` — ângulos, triângulos, seno, cosseno, tangente e radianos.
-- `conteudos/circulo.html` — quadrantes, ângulos de referência e sinais.
-- `conteudos/funcoes.html` — funções seno, cosseno e tangente, amplitude e período.
-- `conteudos/identidades.html` — relação fundamental, soma de arcos, arco duplo e meio-arco.
-- `conteudos/aplicacoes.html` — alturas, distâncias, inclinações e leis dos senos e dos cossenos.
-- `conteudos/estilo.css` — estilo compartilhado dos capítulos.
-- `jogos/missao-quadrantes.html` — jogo com níveis, oito desafios, dicas, pontuação e comentários.
-- `materiais/lista-exercicios.html` — 15 questões comentadas com opção de impressão em PDF.
-- `materiais/roteiro-investigativo.html` — sequência de dois encontros com avaliação e mediação.
+**Teste o link no site publicado.** PDFs de preferência devem permitir selecionar texto, conter título, autoria, referências, descrição de figuras e licença adequada. Gabaritos podem ser arquivos separados.
 
-### Próximas melhorias propostas
-1. Expandir cada capítulo com mais representações visuais e sequências graduais.
-2. Melhorar a acessibilidade de todos os SVGs e controles.
-3. Oferecer mais questões por tópico, com soluções que mostrem estratégias alternativas.
-4. Revisar as respostas do novo jogo e testar em navegadores diferentes.
-5. Verificar autoria, licenças e referências antes da entrega final do REA.
-6. Integrar a branch à `main` depois da revisão, sem perder o histórico.
-# Trigonometria Interativa — protótipo de REA
+## Como inserir novos capítulos e conteúdos teóricos
 
-Este repositório contém um protótipo de ambiente educacional sobre trigonometria, composto por módulos teóricos, dois laboratórios interativos, atividades com feedback e o jogo *Palácio Trigonométrico*.
+1. Crie o novo arquivo HTML em `conteudos/`, por exemplo `equacoes-trigonometricas.html`.
+2. Utilize `conteudos/estilo.css` como referência visual, ou o novo `assets/rea.css` com caminho relativo `../assets/rea.css`.
+3. No arquivo `estudar/index.html`, encontre o guia do novo tema e substitua o aviso de material em preparação por um link:
+   `<a href="../conteudos/equacoes-trigonometricas.html">Estudar equações trigonométricas</a>`.
+4. Acrescente o capítulo também ao índice `conteudos/index.html`.
+5. Faça commit e teste a navegação.
 
-## Como publicar no GitHub Pages
+As trilhas contemplam fundamentos, círculo, funções, identidades, aplicações, equações e inequações, funções inversas, periodicidade, coordenadas polares, números complexos e contextualização histórica. Alguns desses eixos são **projetos de expansão** e não devem ser apresentados como capítulos já completos.
 
-1. Na raiz do repositório já publicado, substitua `index.html` pelo arquivo deste pacote.
-2. Envie a pasta `assets/`, preservando `assets/estilos.css` e `assets/interacoes.js`.
-3. Mantenha (ou envie) `palacio-trigonometrico.html` na mesma pasta de `index.html`.
-4. Envie este `README.md` se desejar documentar o projeto.
-5. Verifique se a configuração do GitHub Pages continua publicando a branch `main` e a pasta `/(root)`.
+## Como preencher os campos @@@@ de Sobre
 
-**Importante:** não envie o arquivo ZIP inteiro para ser executado pelo Pages. Extraia o ZIP e envie os arquivos da pasta `site/`, mantendo as subpastas.
+Acesse o arquivo `sobre/index.html` no GitHub, clique no ícone de lápis **Edit this file**, use `Ctrl + F` para localizar cada `@@@@` e troque apenas o marcador pelo valor correto.
 
-## Mapa da trilha
+Exemplo:
 
-1. Razões trigonométricas no triângulo retângulo.
-2. Círculo trigonométrico.
-3. Funções trigonométricas (amplitude e período).
-4. Identidades, arcos duplos e meio-arco.
-5. Aplicações em alturas, distâncias e inclinações.
+```html
+<dd><span class="token">@@@@</span></dd>
+```
 
-## Etapas do projeto acadêmico
+Pode ser alterado para:
 
-- [ ] Definir objetivos de aprendizagem e público-alvo com a orientação da disciplina.
-- [ ] Conferir licenças dos REA utilizados, preservando a referência da versão específica de cada recurso.
-- [ ] Registrar o que foi adaptado e quais partes foram criadas pelo grupo.
-- [ ] Validar os conteúdos, testes de navegação e acessibilidade com estudantes/professores.
-- [ ] Confirmar autoria, autorização e licença aberta para o material original do grupo e para o jogo.
-- [ ] Elaborar uma ficha técnica final e uma sequência didática detalhada.
+```html
+<dd>Universidade / Instituição de Ensino</dd>
+```
 
-## Arquivos
+**Não substitua todos os `@@@@` automaticamente por um único valor**, porque cada marcador corresponde a um dado diferente. Os campos pendentes incluem:
 
-- `index.html`: trilha de aprendizagem, ferramentas interativas, questionário e informações do REA.
-- `assets/estilos.css`: estilos responsivos.
-- `assets/interacoes.js`: lógica dos laboratórios e correção do questionário.
-- `palacio-trigonometrico.html`: jogo original, sem modificações, enviado pelo grupo.
+- instituição de ensino; curso e disciplina; orientação docente;
+- contato institucional; versão e data da ficha técnica;
+- licença dos textos, atividades, jogos e códigos;
+- condições de reutilização e declaração de titularidade;
+- créditos de materiais externos adicionais;
+- política de privacidade; termos de uso e direitos autorais;
+- declaração de acessibilidade; contato para correções e data dos termos.
 
-## Licenciamento e atribuições — pendente de validação final
+Os documentos anteriores indicam **Jessica Camily Hildebrandt** e **Peterson Luiz do Nascimento da Silva** como autores do trabalho. Confirmem a grafia e as contribuições antes de publicar a ficha final.
 
-Este protótipo **não atribui automaticamente uma licença ao jogo do grupo** nem aos materiais externos. Para o produto ser disponibilizado como REA, os autores devem confirmar que têm direito de licenciar cada componente original e indicar uma licença aberta (por exemplo, CC BY 4.0 para textos, atividades e figuras autorais).
+## Como testar antes de publicar
 
-A simulação *Trig Tour* da PhET é indicada apenas por link externo. Sua licença e suas condições devem ser verificadas na página oficial, especialmente conforme a versão utilizada: https://phet.colorado.edu/en/licensing.
+- Conferir os menus no computador e celular; a versão móvel usa um botão **Menu**.
+- Testar os atalhos internos e o comportamento de abertura dos painéis recolhíveis.
+- Conferir o círculo interativo, o gráfico de seno e o conversor de graus/radianos em `Explorar`.
+- Conferir o treino em `Praticar` nos quatro modos (básico, intermediário, avançado e misto).
+- Acessar os dois jogos em `Jogar` e verificar se não há erros nas questões.
+- Conferir se os marcadores `@@@@` estão apenas na página Sobre e na documentação.
+- Garantir que não há links para PDFs ainda inexistentes.
+- Confirmar créditos e licenças antes da entrega acadêmica como REA.
 
-O código deste pacote foi preparado para funcionar no navegador sem dependências de terceiros. Não há coleta ou transmissão de respostas do questionário.
+## Publicação
 
-## Referência complementar: Mathematics LibreTexts (08/11/2026)
+O GitHub Pages deste projeto publica a branch `main`. Modificações realizadas em outra branch **não ficam públicas até serem integradas à `main`**. Use pull requests para revisar alterações antes da integração.
 
-O projeto passa a consultar o repositório educacional **Mathematics LibreTexts** (<https://math.libretexts.org/>) como base bibliográfica complementar para aperfeiçoar as explicações, exemplos e atividades de Trigonometria, especialmente nas páginas:
+URL esperada, caso a configuração do Pages permaneça a mesma:
 
-- **OpenStax. Precalculus 2e — Chapter 5: Trigonometric Functions**: https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_%28OpenStax%29/05%3A_Trigonometric_Functions
-  - Abrange ângulos, círculo, funções trigonométricas, trigonometria do triângulo retângulo e exercícios.
-  - Página identificada como licenciada sob **CC BY 4.0** (consultada em 08/11/2026).
-- **OpenStax. Algebra and Trigonometry 2e — Right Triangle Trigonometry**: https://math.libretexts.org/Workbench/Algebra_and_Trigonometry_2e_%28OpenStax%29/07%3A_The_Unit_Circle_-_Sine_and_Cosine_Functions/7.03%3A_Right_Triangle_Trigonometry
-- **OpenStax. Precalculus 1e — Unit Circle: Sine and Cosine Functions**: https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_1e_%28OpenStax%29/13%3A_Trigonometric_Functions/13.02%3A_Unit_Circle_-_Sine_and_Cosine_Functions
+https://surreal-complex.github.io/TrigTest/
 
-**Uso no projeto:** nesta atualização os materiais são apenas **referenciados por links**, não copiados nem traduzidos. O LibreTexts reúne recursos de autoria e licenças variadas; antes de reutilizar qualquer texto, imagem, exercício ou figura, conferir a licença e os créditos **da página específica**. Ao adaptar, registrar título, autor original, URL, licença e mudanças realizadas. Não atribuir automaticamente a licença de um capítulo a todo o portal.
+## Referências externas
 
-Esta referência será utilizada no aprofundamento didático dos módulos, mantendo redação, atividades e figuras próprias sempre que possível.
+- [Mathematics LibreTexts](https://math.libretexts.org/) — biblioteca de Matemática, com materiais de autores e licenças variados.
+- [PhET — Trig Tour](https://phet.colorado.edu/en/simulations/trig-tour) — simulação para explorar relações trigonométricas; confira [as licenças específicas](https://phet.colorado.edu/en/licensing).
+- [Portal da Matemática / OBMEP](https://portaldaobmep.impa.br/) — recursos complementares de Matemática.
+
+Esta versão apenas **indica links para referências externas**; não copia os materiais desses sites. Para usar ou adaptar conteúdo, imagens ou exercícios específicos, verifique autoria, licença e obrigações de atribuição da obra utilizada.
+
+## Licenciamento do projeto
+
+**PENDENTE — @@@@**
+
+Uma licença aberta para textos, imagens, atividades e jogos precisa ser definida pelos titulares e devidamente publicada. Evite atribuir uma licença sem confirmar a titularidade dos componentes ou a possibilidade de adaptação e redistribuição dos materiais de terceiros.
