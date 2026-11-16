@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Se utilizar este recurso educacional digital ou o codigo do projeto em seu trabalho, cite a fonte."
+title: "Trigonometria Interativa: Aprenda, Explore, Pratique e Jogue"
+type: software
+# Autores indicados nos trabalhos academicos; confirmar atribuicoes antes da versao definitiva.
+authors:
+  - family-names: "Hildebrandt"
+    given-names: "Jessica Camily"
+  - family-names: "Silva"
+    given-names: "Peterson Luiz do Nascimento da"
+url: "https://surreal-complex.github.io/TrigTest/"
+repository-code: "https://github.com/Surreal-Complex/TrigTest"
+abstract: "Recurso educacional digital de Trigonometria com estudo, visualizacoes, exercicios e jogos."
+# Versao do site: @@@@ (adicionar o campo version apenas apos confirmar o numero).
+# Data da versao: @@@@ (adicionar date-released apenas apos confirmar).
+# Licenca: @@@@ (nao declarar ate que titulares aprovem).
+preferred-citation:
+  type: generic
+  authors:
+    - family-names: "Hildebrandt"
+      given-names: "Jessica Camily"
+    - family-names: "Silva"
+      given-names: "Peterson Luiz do Nascimento da"
+  title: "Trigonometria Interativa: Aprenda, Explore, Pratique e Jogue"
+  year: 2026
+  url: "https://surreal-complex.github.io/TrigTest/"

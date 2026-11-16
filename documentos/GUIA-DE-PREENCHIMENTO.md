@@ -17,6 +17,8 @@ Este manual foi preparado para o repositório **[Surreal-Complex/TrigTest](https
 | `documentos/index.html` | Portal público dos documentos, na cor roxa | Atualizar resumos/status depois da aprovação; links apontam para os documentos no GitHub. |
 | `sobre/index.html` | Ficha visível na aba Sobre | Substituir todos os campos `@@@@` correspondentes e ajustar o status para definitivo quando couber. |
 | `README.md` | Instruções técnicas do repositório | Atualizar a seção de licenciamento e o registro de versões. |
+| `documentos/COMO-CITAR.md` | Guia acadêmico de referência | Confirmar autoria, versão, data, informações institucionais e o modelo adotado. |
+| `CITATION.cff` (na raiz) | Citação automática no GitHub | Atualizar título, autorias e metadados mantendo o YAML válido. |
 | `LICENSE` (ainda inexistente) | Licença do software após decisão | **Criar só depois** de definir titularidade e licença; não inventar essa autorização. |
 
 ## 2. De onde tirar as informações pendentes
@@ -75,3 +77,11 @@ Este manual foi preparado para o repositório **[Surreal-Complex/TrigTest](https
 - [ ] Todas as menções “MINUTA” foram retiradas **apenas depois da aprovação** e não há `@@@@` remanescentes em documentos declarados definitivos.
 
 **Atenção:** revisão técnica e jurídica da instituição ou de profissional habilitado pode ser necessária conforme a aplicação. Estes modelos facilitam o levantamento, mas não garantem, isoladamente, conformidade legal.
+
+## 7. Como completar a orientação de citação
+
+1. Na pasta `documentos/`, edite `COMO-CITAR.md` e confirme a grafia dos nomes, o título oficial e o ano do site.
+2. No arquivo `CITATION.cff`, altere os nomes caso necessário e, quando houver versão/data formal, inclua os campos `version` e `date-released` em formato aceito pelo padrão CFF. Campos comentados com `@@@@` servem de lembrete; não os transforme em valores inválidos.
+3. Confira os exemplos e os atalhos em `sobre/index.html`, na seção `#como-citar`; atualize também os créditos no rodapé.
+4. No GitHub, teste **Cite this repository**. Ajuste o formato de citação ao manual da sua instituição antes da entrega acadêmica.
+5. Se algum jogo, atividade ou imagem tiver autoria diferente da equipe do site, registre a autoria específica e a licença no respectivo material. A licença de uso não é concedida pelo simples fato de a obra ser citável.

@@ -108,4 +108,20 @@ if(quiz){
  });
  next.addEventListener("click",()=>{if(!responded)return;position++;render();});
 }
+
+document.querySelectorAll("[data-copy-target]").forEach(button=>{
+ button.addEventListener("click",async()=>{
+  const target=byId(button.getAttribute("data-copy-target"));
+  const feedback=button.parentElement?.querySelector(".copy-feedback");
+  if(!target)return;
+  const citation=target.innerText.trim();
+  try{
+   if(!navigator.clipboard?.writeText)throw new Error("Área de transferência indisponível");
+   await navigator.clipboard.writeText(citation);
+   if(feedback)feedback.textContent="Copiado! Confira os campos @@@@.";
+  }catch(error){
+   if(feedback)feedback.textContent="Selecione o texto acima e copie manualmente.";
+  }
+ });
+});
 })();
