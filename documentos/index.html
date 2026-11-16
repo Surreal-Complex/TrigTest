@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="../assets/rea.css">
   <script src="../assets/rea.js" defer></script>
   <style>
+    .doc-access{display:flex;align-items:center;gap:17px;background:linear-gradient(125deg,#43216b,#6b399e);border:1px solid #b68fe2;border-radius:21px;padding:24px 26px;margin:23px 0;color:#fff;box-shadow:0 14px 34px #30144828}
+    .doc-access h3{color:#fff;font-size:1.18rem;margin:0 0 6px}
+    .doc-access p{color:#f3e9ff;margin:0;line-height:1.55}
+    .doc-access-icon{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:16px;background:#ffffff23;font-size:1.65rem}
+    @media(max-width:600px){.doc-access{align-items:flex-start;padding:22px 19px}.doc-access-icon{width:43px;height:43px;flex-basis:43px;font-size:1.35rem}}
     .doc-notice{margin:24px 0;border:2px solid #f0d8a3;background:#fff7e6;border-radius:20px;padding:22px 26px;color:#573b19}
     .doc-notice strong{color:#593b09}
     .doc-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -43,6 +48,10 @@
   </div><div class="hero-art" aria-hidden="true"><svg viewBox="0 0 420 320"><circle cx="218" cy="157" r="136" fill="#ffffff13" stroke="#ffffff44" stroke-width="2"/><rect x="106" y="57" width="203" height="224" rx="19" fill="#f9efff" transform="rotate(-9 200 160)"/><rect x="126" y="51" width="203" height="224" rx="19" fill="#f4e3ff" stroke="#fff" stroke-width="4"/><rect x="157" y="83" width="88" height="16" rx="8" fill="#8a58b9"/><path d="M159 135 H289 M159 160 H289 M159 185 H256 M159 210 H282" stroke="#b9a1d3" stroke-width="9" stroke-linecap="round"/><circle cx="298" cy="247" r="52" fill="#ffd78d" stroke="#f7e5af" stroke-width="6"/><path d="m273 247 16 15 32-35" stroke="#472c71" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div></div></section>
   <section class="section" id="documentos"><div class="wrap">
     <div class="section-heading"><div class="section-kicker">Central documental</div><h2>Arquivos disponíveis para consulta</h2><p>Cada cartão abre o documento completo e editável no repositório do projeto.</p></div>
+    <aside class="doc-access" aria-label="Permissões de acesso aos documentos">
+      <span class="doc-access-icon" aria-hidden="true">🔒</span>
+      <div><h3>Documentação pública para consulta</h3><p>Qualquer visitante pode ler e baixar os documentos. <strong>A edição dos arquivos oficiais é restrita aos responsáveis autorizados no GitHub.</strong> Pessoas externas podem sugerir alterações, mas elas não são publicadas sem aprovação.</p></div>
+    </aside>
     <div class="doc-notice" role="note"><strong>⚠ Documentação em fase de preenchimento</strong><p>Os campos <span class="token">@@@@</span> precisam de confirmação. Os textos classificados como <strong>minuta</strong> não foram aprovados pelos titulares ou revisados juridicamente. <strong>Nenhuma licença aberta foi atribuída automaticamente ao projeto.</strong></p></div>
     <div class="doc-cards">
       <article class="doc-card"><span class="doc-tag">Pendente</span><h3>01. Ficha técnica</h3><p>Autores, instituição, responsáveis, versão e objetivos do recurso.</p><a href="https://github.com/Surreal-Complex/TrigTest/blob/main/documentos/FICHA-TECNICA.md" target="_blank" rel="noopener noreferrer">Consultar ficha técnica ↗</a></article>
