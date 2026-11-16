@@ -1,11 +1,12 @@
 # Manual de preenchimento e publicação dos documentos
 
-Este manual foi preparado para o repositório **[Surreal-Complex/TrigTest](https://github.com/Surreal-Complex/TrigTest)**, publicado em **[GitHub Pages](https://surreal-complex.github.io/TrigTest/)**. As minutas não equivalem a documentos finais assinados/aprovados. Não substitua todos os `@@@@` de uma vez: cada um representa uma informação diferente, às vezes repetida em mais de um documento.
+Este manual foi preparado para o repositório **[Surreal-Complex/TrigTest](https://github.com/Surreal-Complex/TrigTest)**, publicado em **[GitHub Pages](https://surreal-complex.github.io/TrigTest/)**. As minutas não equivalem a documentos finais assinados/aprovados. **🟨 Pré-preenchido — conferência recomendada** identifica dados verificáveis já registrados; `@@@@` indica informações ainda pendentes ou campos de exemplo. Consulte [Auditoria de pendências](AUDITORIA-DE-PENDENCIAS.md) **antes de editar**. Não substitua todos os `@@@@` de uma vez: cada um representa uma informação diferente, às vezes repetida em mais de um documento.
 
 ## 1. Quais arquivos editar
 
 | Arquivo | Serve para | O que precisa completar |
 | --- | --- | --- |
+| `documentos/AUDITORIA-DE-PENDENCIAS.md` | **Mapa do que foi preenchido e do que ainda depende de validação** | Conferir dados marcados 🟨 e aprovar/atualizar a data da revisão. |
 | `documentos/FICHA-TECNICA.md` | Identificação, autoria, orientação e manutenção | Vínculos, funções, versão, contato, aprovação. |
 | `documentos/LICENCIAMENTO.md` | Escolha de licenças e titularidade | Licenças por tipo de obra, consentimento dos autores, limites de materiais externos. |
 | `documentos/CREDITOS-E-REFERENCIAS.md` | Créditos de autores, fontes e uso de IA | Participações individuais, revisores, bibliografia, imagens/códigos de terceiros. |
@@ -43,9 +44,9 @@ Este manual foi preparado para o repositório **[Surreal-Complex/TrigTest](https
 1. Entre em **https://github.com/Surreal-Complex/TrigTest** com uma conta que tenha permissão de edição.
 2. Abra a pasta `documentos/` e clique no arquivo desejado, por exemplo, `FICHA-TECNICA.md`.
 3. Clique no ícone **lápis** (*Edit this file*), ou use o atalho de edição disponível na interface.
-4. Use **Ctrl + F** para localizar `@@@@`. Substitua **só o marcador correspondente** pelo dado comprovado. Atenção: o arquivo pode conter vários marcadores com funções diferentes.
+4. Use **Ctrl + F** para localizar **`🟨`** primeiro: confira o dado pré-preenchido e sua fonte; não remova o aviso de revisão até que alguém responsável tenha validado o documento. Depois busque **`@@@@`** e substitua **só os campos efetivamente pendentes** pelo dado comprovado. Os `@@@@` em modelos de autorização, exemplos e data de acesso do leitor **permanecem em branco até o uso**.
 5. Clique em **Commit changes**. Para alterações sensíveis (autorais e jurídicas), prefira criar uma nova branch e um **pull request** para revisão antes de integrar à `main`.
-6. Edite também `sobre/index.html` nos campos equivalentes. No HTML, substitua `<span class="token">@@@@</span>` pelo texto validado, ou pelo mesmo `<span>` com texto atualizado, se preferir manter o destaque.
+6. Edite também `sobre/index.html` nos campos equivalentes. No HTML, procure **`review-badge`** para valores já pré-preenchidos; após conferir, atualize ou retire o aviso provisório. Substitua `<span class="token">@@@@</span>` apenas pelo valor validado. Se esse valor ainda depende de uma segunda revisão, use `<span class="review-badge">🟨 Verificado — confira</span>` ao lado.
 7. No arquivo `documentos/index.html`, retire a indicação **Minuta / pendente** apenas do documento realmente revisado e aprovado.
 8. Após a integração na branch `main`, aguarde a publicação do GitHub Pages e confira **https://surreal-complex.github.io/TrigTest/sobre/** e **https://surreal-complex.github.io/TrigTest/documentos/**.
 

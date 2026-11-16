@@ -1,6 +1,6 @@
 # Créditos, autorias, referências e transparência
 
-> Minuta. Os nomes e vínculos devem ser conferidos antes de serem usados como declaração formal de autoria.
+> Minuta. Os nomes e vínculos devem ser conferidos antes de serem usados como declaração formal de autoria. 🟨 **Dados pré-preenchidos por fonte pública: conferir antes da aprovação.** Veja [a auditoria](AUDITORIA-DE-PENDENCIAS.md).
 
 ## Créditos do projeto
 
@@ -43,9 +43,9 @@ A construção do **Trigonometria Interativa** contou com assistência de **Chat
 
 ## Referências externas atualmente indicadas por link
 
-1. [Mathematics LibreTexts](https://math.libretexts.org/) — repositório de livros e conteúdos matemáticos. **Cada página/livro tem informações próprias de autoria e licença**: não atribuir uma licença única a toda a plataforma.
-2. [PhET Interactive Simulations — Trig Tour](https://phet.colorado.edu/en/simulations/trig-tour) — simulação externa da University of Colorado Boulder. Consulte [Licensing Information](https://phet.colorado.edu/en/licensing) e [Terms of Use](https://phet.colorado.edu/en/terms-of-use) antes de copiar, incorporar ou distribuir a simulação.
-3. [Portal da Matemática / OBMEP](https://portaldaobmep.impa.br/) — material complementar de Matemática, vinculado ao IMPA. Consulte [Uso do Material do Portal](https://portaldaobmep.impa.br/index.php/site/usar?a=2), que menciona Creative Commons 3.0; **a modalidade e a versão aplicável ao item exato precisam ser verificadas**.
+1. 🟨 [Mathematics LibreTexts](https://math.libretexts.org/) — as três páginas **OpenStax** explicitamente indicadas em `conteudos/index.html` exibem **CC BY 4.0**: [*Precalculus 2e*, cap. 5](https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_2e_%28OpenStax%29/05%3A_Trigonometric_Functions), [*Algebra and Trigonometry 2e*, seção 7.3](https://math.libretexts.org/Workbench/Algebra_and_Trigonometry_2e_%28OpenStax%29/07%3A_The_Unit_Circle_-_Sine_and_Cosine_Functions/7.03%3A_Right_Triangle_Trigonometry) e [*Precalculus 1e*, seção 13.2](https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_1e_%28OpenStax%29/13%3A_Trigonometric_Functions/13.02%3A_Unit_Circle_-_Sine_and_Cosine_Functions). **Pré-conferência em 16/11/2026, a confirmar antes de reuso**. Não aplicar CC BY 4.0 indiscriminadamente a todo LibreTexts ou a imagens com direitos distintos.
+2. 🟨 [PhET Interactive Simulations — Trig Tour](https://phet.colorado.edu/en/simulations/trig-tour) — simulação externa da University of Colorado Boulder. A [política geral de licenciamento](https://phet.colorado.edu/en/licensing) informa **CC BY-NC 4.0 para simulações HTML comuns** (pré-conferido em 16/11/2026). Verifique a simulação exata, PhET-iO, marca, uso comercial e [termos](https://phet.colorado.edu/en/terms-of-use) antes de reproduzir ou incorporar.
+3. 🟨 [Portal da Matemática / OBMEP](https://portaldaobmep.impa.br/) — material complementar vinculado ao IMPA. A [página geral de uso do Portal](https://portaldaobmep.impa.br/index.php/site/usar?a=2) aponta para [CC BY 3.0 Brasil](https://creativecommons.org/licenses/by/3.0/br/) (**pré-conferido em 16/11/2026**). Verifique avisos/exceções da obra específica antes de adaptar.
 4. [OpenStax](https://openstax.org/) — fonte bibliográfica eventualmente utilizada como referência. Para cada livro, consultar a licença indicada na página da obra e as [informações de licenciamento](https://help.openstax.org/s/article/Licensing-information-of-OpenStax-textbooks); **não declarar que foi incorporado ao site sem verificar**.
 
 **Situação do projeto quanto a essas fontes:** referências e links de estudo. Até a verificação item a item, não declarar que seus textos, imagens ou arquivos foram reproduzidos sob determinada licença.

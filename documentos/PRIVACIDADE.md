@@ -11,17 +11,17 @@
 
 ## 2. Informações tratadas e finalidades
 
-Na revisão inicial do código estático do projeto, **não foi identificada** funcionalidade própria de cadastro, envio de respostas a servidor, formulário de coleta ou ferramenta de análises de audiência. Essa observação precisa ser reconfirmada após cada alteração. **Data e método da auditoria final: @@@@**.
+🟨 **Pré-checagem técnica — conferência recomendada (16/11/2026):** inspeção estática dos 35 arquivos do repositório na base do commit `6e75d75f3ae4a22456138e0785121819a87986af`. Não foram localizados formulários `<form>`, chamadas a `fetch()`, `XMLHttpRequest`, `WebSocket` ou `sendBeacon`, uso explícito de `localStorage`, `sessionStorage` ou `document.cookie`, iframes, scripts e estilos remotos carregados automaticamente. Não foi identificada funcionalidade própria de cadastro, envio de respostas a servidor ou ferramenta de análises de audiência nesses arquivos. **Não é auditoria de tráfego em produção:** conferir DevTools/rede do navegador, configurações de hospedagem e atualizações futuras. **Auditoria final, responsável e aprovação: @@@@**.
 
 O site é hospedado no **GitHub Pages**. A documentação do provedor informa que endereços IP dos visitantes são registrados para fins de segurança, independentemente de haver login no GitHub: [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). As condições pertinentes encontram-se na [Declaração de Privacidade do GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Verificar a configuração e os contratos aplicáveis: **@@@@**.
 
 | Operação | Dados possíveis | Finalidade | Base legal/controlador/retensão a validar |
 | --- | --- | --- | --- |
 | Acesso às páginas estáticas | IP, registros técnicos de requisições e segurança pelo provedor de hospedagem | Entrega e segurança do site | **@@@@**; verificar documentação do GitHub. |
-| Treinos, jogos e explorações no navegador | Escolhas e resultados apresentados na própria página | Retorno pedagógico durante a sessão | Confirmar se permanecem apenas no dispositivo: **@@@@**. |
+| Treinos, jogos e explorações no navegador | Escolhas e resultados apresentados na própria página | Retorno pedagógico durante a sessão | 🟨 Pré-checagem do código: não foi localizado envio próprio por rede nem armazenamento Web Storage; **confirmar em execução e após mudanças: @@@@**. |
 | Clique em links externos (PhET, LibreTexts, OBMEP e GitHub) | Dados tratados pelos sites de destino | Consulta voluntária a recursos externos | Sujeito às políticas dos respectivos sites. |
 | Contato por e-mail ou outro canal, quando divulgado | Identificação, mensagem e dados fornecidos pelo interessado | Atendimento, correções e solicitações de direitos | Canal, base legal, prazo e armazenamento: **@@@@**. |
-| Cookies, estatísticas, mídias incorporadas e futuros logins | **@@@@** | **@@@@** | Verificar tecnicamente antes de ativar ou alterar esta política. |
+| Cookies, estatísticas, mídias incorporadas e futuros logins | 🟨 Não observados mecanismos próprios no código estático inspecionado | Sem finalidade declarada no código analisado | **Verificar em produção, no provedor e após alterações: @@@@**. |
 
 ## 3. Compartilhamento, hospedagem e transferências
 
@@ -37,6 +37,6 @@ O recurso é voltado também ao Ensino Médio. Antes de criar cadastros, ranking
 
 ## 6. Cookies e atualizações
 
-Resultado da inspeção técnica de cookies, `localStorage`, ferramentas analíticas, scripts remotos e iframes: **@@@@**. Se forem utilizados cookies que exijam mecanismos de informação ou escolha, avaliar as orientações da [ANPD](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais). Não instalar um banner de consentimento fictício sem verificar o uso real de cookies e suas finalidades.
+🟨 **Resultado preliminar da inspeção de código (16/11/2026, conferir):** não foram localizados usos explícitos de `document.cookie`, `localStorage` ou `sessionStorage`, scripts de análise de audiência, scripts remotos e iframes. Isso **não exclui** cookies, registros ou outras tecnologias aplicadas pelo navegador, provedor, serviços externos abertos pelo visitante ou em futuras atualizações. **Resultado da auditoria de rede e aprovação final: @@@@**. Se forem utilizados cookies que exijam mecanismos de informação ou escolha, avaliar as orientações da [ANPD](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais). Não instalar um banner de consentimento fictício sem verificar o uso real de cookies e suas finalidades.
 
-Última revisão de conteúdo: **@@@@**. Próxima revisão prevista: **@@@@**.
+Última **pré-revisão técnica** do código: 🟨 **16/11/2026 — conferência recomendada**. Data de aprovação e vigência desta política: **@@@@**. Próxima revisão prevista: **@@@@**.

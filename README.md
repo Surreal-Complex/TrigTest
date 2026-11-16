@@ -186,8 +186,9 @@ Foi acrescentado o [portal público de documentação](https://surreal-complex.g
 - [Registro de fontes e licenças](documentos/REGISTRO-DE-FONTES-E-LICENCAS.md)
 - [Guia de preenchimento e publicação](documentos/GUIA-DE-PREENCHIMENTO.md)
 - [Modelo de autorização para colaboradores](documentos/MODELO-DE-AUTORIZACAO.md)
+- [Auditoria de dados pré-preenchidos e pendências — 16/11/2026](documentos/AUDITORIA-DE-PENDENCIAS.md)
 
-**Importante:** os documentos são modelos, com campos `@@@@` e indicações de verificação. Não se deve retirar o status de minuta antes de revisar os fatos com os responsáveis. Não há arquivo `LICENSE` definitivo porque os titulares ainda não escolheram e aprovaram uma licença.
+**Importante:** a [auditoria](documentos/AUDITORIA-DE-PENDENCIAS.md) separa informações **🟨 pré-preenchidas por fonte pública (conferência recomendada)**, informações **`@@@@` para confirmação dos responsáveis** e **campos-modelo** que só serão preenchidos quando usados. Os documentos continuam minutas. Não se deve retirar o status de minuta antes de revisar os fatos com os responsáveis. Não há arquivo `LICENSE` definitivo porque os titulares ainda não escolheram e aprovaram uma licença.
 
 ## Como referenciar o site em trabalhos acadêmicos
 
