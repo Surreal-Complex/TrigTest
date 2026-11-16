@@ -6,6 +6,10 @@
 
 Buscar acesso compreensível e operável a estudantes e docentes com diferentes necessidades, usando como referência as [WCAG 2.2](https://www.w3.org/TR/WCAG22/) (recomendação do W3C). O nível pretendido, quando definido, será **@@@@**; um teste real é necessário antes de declarar que foi atingido.
 
+## 🟨 Verificação inicial de estrutura — conferência recomendada
+
+Na inspeção estática de 16/11/2026 (base do commit `6e75d75f3ae4a22456138e0785121819a87986af`), foram identificados links de salto para o conteúdo nas sete páginas principais e no portal documental, além de guias recolhíveis com `<details>` em páginas do projeto. **Isso comprova apenas a presença de elementos estruturais**, não seu funcionamento acessível em navegadores, jogos ou tecnologias assistivas. Testes reais e parecer final continuam **@@@@**. Consulte [a auditoria](AUDITORIA-DE-PENDENCIAS.md).
+
 ## Situação a conferir
 
 - **Navegação:** confirmar menus, links, foco visível, ordem de tabulação, menus recolhíveis e skip link com teclado.

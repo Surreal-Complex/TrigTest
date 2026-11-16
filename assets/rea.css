@@ -150,6 +150,10 @@ main{min-height:65vh}
 .legal-card dt{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:850;color:#6d468f;margin-top:15px}
 .legal-card dd{margin:0 0 7px;color:var(--ink);word-break:break-word}
 .token{background:#ffefce;color:#654217;font-weight:820;padding:2px 7px;border-radius:5px}
+.review-badge{display:inline-flex;align-items:center;background:#fff2ce;color:#6c430c;border:1px solid #d49e37;border-radius:999px;font-size:.76rem;font-weight:820;padding:3px 9px;margin:3px 5px 3px 0;vertical-align:middle;line-height:1.5}
+.review-panel{background:linear-gradient(110deg,#fffaf0,#fff3da);border:2px solid #e5bc6a;border-radius:20px;padding:22px 25px;color:#52391b;margin:22px 0}
+.review-panel h3{color:#593a13;margin:0 0 8px}.review-panel p{color:#614923;margin:9px 0}
+.review-panel a{color:#5d3389;font-weight:750}
 .site-footer{background:#1f122f;color:#fff;padding:42px 0 27px}
 .site-footer p{color:#d0bfdc}.site-footer a{color:#e9d4ff}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}

@@ -1,6 +1,6 @@
 # Ficha técnica — Trigonometria Interativa
 
-> **MINUTA PARA CONFERÊNCIA.** Substitua cada `@@@@` pelo dado confirmado e registre a data da revisão. Não trate os nomes ou vínculos abaixo como autorizações de licenciamento.
+> **MINUTA PARA CONFERÊNCIA.** Substitua cada `@@@@` pelo dado confirmado e registre a data da revisão. 🟨 **Pré-preenchido — conferência recomendada** indica dados levantados em fonte pública e que devem ser revisados junto dos demais campos. Não trate os nomes ou vínculos abaixo como autorizações de licenciamento. Consulte [a auditoria](AUDITORIA-DE-PENDENCIAS.md).
 
 | Campo | Informação | Como confirmar |
 | --- | --- | --- |
@@ -17,7 +17,9 @@
 | Orientador(a) / professor(a) | @@@@ | Plano de ensino, aprovação e grafia oficial. |
 | Projeto, turma, campus (se aplicável) | @@@@ | Documentação do projeto. |
 | Local / ano de criação | @@@@ / 2026 | Confirmar município e ano de publicação. |
-| Versão atual e data de atualização | @@@@ | Atualizar após cada publicação. |
+| Versão editorial oficial | @@@@ | Só preencher quando a equipe atribuir/aprovar uma versão. |
+| 🟨 Base técnica conferida | Commit `6e75d75f3ae4a22456138e0785121819a87986af` em 16/11/2026 (pré-checagem) | **Conferir antes de atualizar**. Não confundir commit com versão acadêmica ou aprovação final. |
+| 🟨 Conta GitHub titular do repositório | `Surreal-Complex` | Identifica a conta que hospeda o repositório, **não** substitui a titularidade dos direitos nem a pessoa técnica responsável. |
 | URL pública | https://surreal-complex.github.io/TrigTest/ | Verificar se o endereço de produção continua o mesmo. |
 | Repositório | https://github.com/Surreal-Complex/TrigTest | Conferir administradores do projeto. |
 | Contato público | @@@@ | Preferir endereço institucional ou próprio para o projeto, com autorização de divulgação. |

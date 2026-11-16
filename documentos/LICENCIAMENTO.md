@@ -1,6 +1,6 @@
 # Licenciamento e direitos autorais — minuta
 
-> **LICENÇA NÃO DEFINIDA.** Esta página é uma minuta informativa; **não constitui concessão de licença**, nem autoriza por si só copiar, adaptar ou redistribuir todos os conteúdos do repositório. Os titulares devem escolher e aprovar expressamente as licenças antes de criar um arquivo `LICENSE` definitivo ou aplicar selos Creative Commons.
+> **LICENÇA NÃO DEFINIDA.** 🟨 As licenças externas identificadas na [auditoria](AUDITORIA-DE-PENDENCIAS.md) foram pré-verificadas, **mas não concedem licença ao conteúdo autoral do nosso site**. Esta página é uma minuta informativa; **não constitui concessão de licença**, nem autoriza por si só copiar, adaptar ou redistribuir todos os conteúdos do repositório. Os titulares devem escolher e aprovar expressamente as licenças antes de criar um arquivo `LICENSE` definitivo ou aplicar selos Creative Commons.
 
 ## 1. Titularidade e autorização
 
