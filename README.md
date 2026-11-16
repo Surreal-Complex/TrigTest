@@ -189,6 +189,10 @@ Foi acrescentado o [portal público de documentação](https://surreal-complex.g
 
 **Importante:** os documentos são modelos, com campos `@@@@` e indicações de verificação. Não se deve retirar o status de minuta antes de revisar os fatos com os responsáveis. Não há arquivo `LICENSE` definitivo porque os titulares ainda não escolheram e aprovaram uma licença.
 
+## Transparência sobre apoio de IA generativa
+
+A criação, reorganização visual, programação assistida e documentação do projeto contaram com apoio de **ChatGPT (OpenAI)**. As contribuições e os limites do uso estão descritos na [aba Sobre — Uso de IA](https://surreal-complex.github.io/TrigTest/sobre/#ia) e no documento [Créditos e referências](documentos/CREDITOS-E-REFERENCIAS.md). Modelos exatos, datas de uso, eventuais outras ferramentas e nomes de revisores devem ser confirmados e preenchidos nos campos `@@@@`.
+
 ## Licenciamento do projeto
 
 **PENDENTE — @@@@**

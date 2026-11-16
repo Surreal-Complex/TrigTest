@@ -14,6 +14,33 @@
 | Ilustrações, ícones, fontes, fotografias e outros ativos | @@@@ | Listar cada origem/licença individualmente. |
 | Assistência de IA generativa | ChatGPT (OpenAI) | Organização do site e minutas documentais com apoio de IA; escopo completo, revisão humana e outras ferramentas: `@@@@`. |
 
+## Uso de inteligência artificial na criação do site
+
+A construção do **Trigonometria Interativa** contou com assistência de **ChatGPT, da OpenAI**, como ferramenta de IA generativa. As contribuições identificadas nesta colaboração incluem:
+
+- Planejamento e reorganização da arquitetura de navegação em sete áreas;
+- Propostas de interface visual, uso da identidade roxa e estrutura de páginas;
+- Apoio na elaboração e alteração de código HTML, CSS e JavaScript;
+- Formulação inicial e revisão assistida de textos de apresentação e documentação;
+- Elaboração das minutas de créditos, privacidade, termos, acessibilidade, licenciamento e instruções de edição.
+
+**Limite da declaração:** esta lista registra categorias de assistência identificadas, não uma atribuição automática de todas as obras, jogos, exercícios ou imagens à IA. O histórico exato das demais etapas e ferramentas deve ser conferido com os participantes.
+
+| Campo de transparência | Registro |
+| --- | --- |
+| Ferramenta | ChatGPT — OpenAI: https://chatgpt.com/ |
+| Modelo(s)/versão(ões) utilizado(s) | @@@@ |
+| Datas e intervalos de uso | @@@@ |
+| Outras ferramentas de IA, caso existam | @@@@ |
+| Etapas, arquivos e artefatos gerados ou modificados com IA | @@@@ |
+| Integrantes responsáveis por selecionar, corrigir e validar os resultados | @@@@ |
+| Revisão dos conteúdos matemáticos, questões e soluções | @@@@ |
+| Aprovação final e decisão sobre licenciamento | @@@@ |
+
+**Modelo de referência (adaptar às normas da instituição):** OPENAI. *ChatGPT* [ferramenta de inteligência artificial generativa]. Disponível em: https://chatgpt.com/. Acesso em: **@@@@**.
+
+**Fonte institucional sobre transparência:** [OpenAI — Sharing & publication policy](https://openai.com/policies/sharing-publication-policy/). O uso de IA é declarado publicamente na seção [Sobre → Uso de IA](https://surreal-complex.github.io/TrigTest/sobre/#ia), mas isso não dispensa a revisão acadêmica, editorial e jurídica dos responsáveis humanos.
+
 ## Referências externas atualmente indicadas por link
 
 1. [Mathematics LibreTexts](https://math.libretexts.org/) — repositório de livros e conteúdos matemáticos. **Cada página/livro tem informações próprias de autoria e licença**: não atribuir uma licença única a toda a plataforma.
