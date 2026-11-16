@@ -189,6 +189,12 @@ Foi acrescentado o [portal público de documentação](https://surreal-complex.g
 
 **Importante:** os documentos são modelos, com campos `@@@@` e indicações de verificação. Não se deve retirar o status de minuta antes de revisar os fatos com os responsáveis. Não há arquivo `LICENSE` definitivo porque os titulares ainda não escolheram e aprovaram uma licença.
 
+## Como referenciar o site em trabalhos acadêmicos
+
+A aba [Sobre → Como citar](https://surreal-complex.github.io/TrigTest/sobre/#como-citar) contém referência ABNT sugerida, citação autor-data e crédito breve para apresentações, com botões de cópia. O [guia de citação](documentos/COMO-CITAR.md) traz também um modelo BibTeX para LaTeX. O arquivo [CITATION.cff](CITATION.cff), na raiz, habilita a função **Cite this repository** do GitHub.
+
+**Atenção:** os autores indicados (Jessica Camily Hildebrandt e Peterson Luiz do Nascimento da Silva) constam da documentação do projeto, mas a grafia, atribuição de contribuições e os dados institucionais precisam de confirmação. Citar não substitui as permissões para adaptar ou redistribuir conteúdos.
+
 ## Transparência sobre apoio de IA generativa
 
 A criação, reorganização visual, programação assistida e documentação do projeto contaram com apoio de **ChatGPT (OpenAI)**. As contribuições e os limites do uso estão descritos na [aba Sobre — Uso de IA](https://surreal-complex.github.io/TrigTest/sobre/#ia) e no documento [Créditos e referências](documentos/CREDITOS-E-REFERENCIAS.md). Modelos exatos, datas de uso, eventuais outras ferramentas e nomes de revisores devem ser confirmados e preenchidos nos campos `@@@@`.
