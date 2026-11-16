@@ -173,6 +173,22 @@ https://surreal-complex.github.io/TrigTest/
 
 Esta versão apenas **indica links para referências externas**; não copia os materiais desses sites. Para usar ou adaptar conteúdo, imagens ou exercícios específicos, verifique autoria, licença e obrigações de atribuição da obra utilizada.
 
+## Documentação legal e acadêmica — minutas para revisão
+
+Foi acrescentado o [portal público de documentação](https://surreal-complex.github.io/TrigTest/documentos/) e a pasta [documentos/](documentos/), contendo:
+
+- [Ficha técnica](documentos/FICHA-TECNICA.md)
+- [Licenciamento e direitos autorais](documentos/LICENCIAMENTO.md)
+- [Créditos, fontes e transparência de IA](documentos/CREDITOS-E-REFERENCIAS.md)
+- [Política de privacidade — minuta](documentos/PRIVACIDADE.md)
+- [Termos de uso — minuta](documentos/TERMOS-DE-USO.md)
+- [Acessibilidade — declaração e plano de testes](documentos/ACESSIBILIDADE.md)
+- [Registro de fontes e licenças](documentos/REGISTRO-DE-FONTES-E-LICENCAS.md)
+- [Guia de preenchimento e publicação](documentos/GUIA-DE-PREENCHIMENTO.md)
+- [Modelo de autorização para colaboradores](documentos/MODELO-DE-AUTORIZACAO.md)
+
+**Importante:** os documentos são modelos, com campos `@@@@` e indicações de verificação. Não se deve retirar o status de minuta antes de revisar os fatos com os responsáveis. Não há arquivo `LICENSE` definitivo porque os titulares ainda não escolheram e aprovaram uma licença.
+
 ## Licenciamento do projeto
 
 **PENDENTE — @@@@**
