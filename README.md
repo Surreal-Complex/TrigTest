@@ -54,6 +54,17 @@ TrigTest/
 
 Arquivos anteriores `estilos.css` e `interacoes.js` na raiz foram mantidos para preservar o histórico, mas **não são utilizados pelas sete novas páginas**.
 
+## Identidade visual, favicon e logomarca
+
+O símbolo próprio do projeto representa um **círculo trigonométrico com um raio dourado e o símbolo π**, sobre fundo roxo. Foi criado especialmente para o site, usando formas vetoriais originais, sem copiar logomarcas externas. A arte não altera a licença geral ainda pendente de escolha dos titulares.
+
+- `assets/logo-trigonometria.svg` — marca vetorial usada no cabeçalho de todas as sete áreas principais, na Página Inicial e como favicon SVG.
+- `assets/favicon-32.png` — favicon alternativo de 32 × 32 pixels.
+- `assets/apple-touch-icon.png` — ícone de 180 × 180 pixels para atalhos em dispositivos Apple.
+- `favicon.ico` — compatibilidade com navegadores que solicitam o favicon tradicional na raiz.
+
+Para substituir a identidade no futuro, atualize esses quatro arquivos com novas versões consistentes, preservando nomes e caminhos. As páginas HTML já apontam para os arquivos; caso renomeie um arquivo, atualize também o caminho nos elementos `<link rel="icon">` e nas imagens de marcação `<img class="brand-logo">`. **Não envie arquivo de marca de terceiros sem verificar o direito de uso.** O navegador pode manter um ícone anterior em cache; teste em janela anônima.
+
 ## Como acrescentar os PDFs depois
 
 **Os PDFs futuros ainda não foram criados nem vinculados**. Por isso, o site apresenta apenas avisos de material em preparação, sem links quebrados.
