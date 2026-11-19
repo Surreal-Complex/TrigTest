@@ -57,21 +57,7 @@ if(degIn){
 }
 const quiz=byId("quiz-start");
 if(quiz){
- const bank=[
-  {l:"basico",t:"Triângulos",q:"Num triângulo retângulo, qual razão define o seno?",o:["Oposto / hipotenusa","Adjacente / hipotenusa","Oposto / adjacente","Hipotenusa / oposto"],a:0,e:"O seno de um ângulo agudo é a razão entre o cateto oposto e a hipotenusa."},
-  {l:"basico",t:"Ângulos",q:"180° correspondem a quantos radianos?",o:["π/2","2π","π","π/3"],a:2,e:"Uma volta completa tem 360° = 2π; meia volta, 180° = π."},
-  {l:"basico",t:"Ângulos notáveis",q:"Qual é o valor de sen 30°?",o:["√3/2","1/2","1","√2/2"],a:1,e:"Num triângulo 30°–60°–90°, o cateto oposto ao ângulo de 30° mede metade da hipotenusa."},
-  {l:"basico",t:"Círculo",q:"Em qual quadrante seno e cosseno são ambos negativos?",o:["I","II","III","IV"],a:2,e:"No terceiro quadrante, as duas coordenadas do ponto no círculo são negativas."},
-  {l:"basico",t:"Quadrantes",q:"Qual o sinal de cos 120°?",o:["Positivo","Negativo","Indefinido","Zero"],a:1,e:"120° está no segundo quadrante, onde a coordenada horizontal (cosseno) é negativa."},
-  {l:"intermediario",t:"Referência",q:"Qual é o seno de 150°?",o:["−1/2","√3/2","1/2","−√3/2"],a:2,e:"150° tem referência 30°. No segundo quadrante, o seno é positivo: 1/2."},
-  {l:"intermediario",t:"Período",q:"Qual o período de f(x) = sen(3x)?",o:["6π","2π/3","π/3","3π"],a:1,e:"Para sen(Bx), o período é 2π/|B|. Aqui B = 3, então 2π/3."},
-  {l:"intermediario",t:"Amplitude",q:"Qual a amplitude de g(x) = −2 cos x + 1?",o:["−2","1","3","2"],a:3,e:"Amplitude é o valor absoluto do coeficiente do cosseno: |−2| = 2."},
-  {l:"intermediario",t:"Identidades",q:"Quanto vale sen²x + cos²x?",o:["0","1","tan x","2"],a:1,e:"Pela relação fundamental obtida do círculo unitário, sen²x + cos²x = 1."},
-  {l:"avancado",t:"Arco duplo",q:"Se sen x = 3/5 e cos x = 4/5, quanto vale sen(2x)?",o:["24/25","7/25","12/25","1"],a:0,e:"Use sen(2x)=2 sen x cos x=2·3/5·4/5=24/25."},
-  {l:"avancado",t:"Lei dos cossenos",q:"Dois lados medem 5 e 8 e formam 60°. Quanto mede o lado oposto?",o:["7","√89","13","√49/2"],a:0,e:"Pela lei dos cossenos: c²=25+64−2·5·8·cos60°=89−40=49. Logo c=7."},
-  {l:"avancado",t:"Identidades",q:"Simplifique 1 − cos²x.",o:["cos²x","tan²x","sen²x","sen 2x"],a:2,e:"Da relação sen²x+cos²x=1, isolamos sen²x = 1−cos²x."},
-  {l:"avancado",t:"Aplicações",q:"A 10 m da base, o ângulo de elevação da torre é 45°. Quanto mede a altura acima da linha de observação?",o:["5 m","20 m","10 m","10√2 m"],a:2,e:"tg 45° = h/10 = 1, portanto h = 10 m."}
- ];
+ const bank=window.TRIG_BANK||[];
  let sequence=[],position=0,points=0,responded=false;
  const game=byId("quiz-game"),opts=byId("quiz-options"),msg=byId("quiz-result"),next=byId("quiz-next");
  function render(){
@@ -102,7 +88,7 @@ if(quiz){
  quiz.addEventListener("click",()=>{
   const level=byId("quiz-level").value;
   sequence=bank.filter(q=>level==="todos"||q.l===level);
-  sequence=[...sequence].sort(()=>Math.random()-.5).slice(0,level==="todos"?10:6);
+  sequence=[...sequence];for(let i=sequence.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[sequence[i],sequence[j]]=[sequence[j],sequence[i]];}sequence=sequence.slice(0,level==="todos"?10:6);
   position=0;points=0;game.hidden=false;render();
   game.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"center"});
  });

@@ -7,14 +7,23 @@ Projeto educacional de Trigonometria para o Ensino Médio, com estudo, exploraç
 A versão reorganizada tem **sete entradas principais** na navegação superior:
 
 1. **Página Inicial** — `index.html`. Apresentação visual, atalhos para todas as áreas e destaque para o Palácio.
-2. **Estudar** — `estudar/index.html`. Introdução, finalidade, mapa com dez eixos temáticos, métodos de estudo e glossário, com guias recolhíveis.
-3. **Explorar** — `explorar/index.html`. Laboratórios de círculo unitário, gráfico transformável de seno e conversão de unidades; aprofundamentos, curiosidades e fontes externas.
-4. **Praticar** — `praticar/index.html`. Questões comentadas, treino interativo por dificuldade, espaço para PDFs, listas, avaliações e desafios.
+2. **Estudar** — `estudar/index.html`. Introdução, finalidade, mapa com dez capítulos ativos, busca temática, progresso local facultativo, métodos de estudo e glossário, com guias recolhíveis.
+3. **Explorar** — `explorar/index.html`. Laboratórios de círculo unitário, gráfico transformável de seno, lei dos cossenos, arcos trigonométricos principais e conversão de unidades; aprofundamentos, curiosidades e fontes externas.
+4. **Praticar** — `praticar/index.html`. Banco de 60 questões comentadas, treino interativo por dificuldade com 6 itens por nível ou 10 no modo misto, espaço para PDFs, listas, avaliações e desafios.
 5. **Jogar** — `jogar/index.html`. Apresentação visual específica de cada jogo, regras e orientações.
-6. **Professores** — `professores/index.html`. Planos de aula, estratégias, questões de aplicação, avaliação, recursos e inclusão.
+6. **Professores** — `professores/index.html`. Sete sequências de aulas adaptáveis, estratégias, banco de atividades, gerador de folhas imprimíveis e PDF, rubrica de avaliação, recursos e inclusão.
 7. **Sobre** — `sobre/index.html`. Projeto, autores, créditos, referências, licenças, informações legais e campos pendentes marcados como `@@@@`.
 
 Os **links da navegação principal** estão no cabeçalho de cada uma dessas páginas. As **sub-abas** são atalhos para seções dentro da página e os **guias recolhíveis** usam o elemento HTML `<details>`.
+
+### Atualização de 19/11/2026: capítulos e ferramentas adicionais
+
+- **Conteúdos autorais de apoio para revisão:** cinco novos capítulos introdutórios em `conteudos/equacoes.html`, `inversas.html`, `ondas.html`, `complexos.html` e `historia.html`, além de justificativas complementares nos cinco capítulos existentes. Estes textos constituem material de apoio sujeito a revisão matemática e pedagógica, não substituem as apostilas que serão elaboradas pelos autores.
+- **Banco do treino:** `assets/banco-questoes.js`. Cada objeto contém `l` (dificuldade), `t` (tema), `q` (enunciado), `o` (quatro alternativas), `a` (índice de 0 a 3 da correta) e `e` (explicação). Para adicionar questões, edite esse arquivo preservando a sintaxe e confira o gabarito; o treino e o gerador para docentes reutilizam o mesmo banco.
+- **Novos laboratórios:** `assets/laboratorios.js` implementa lei dos cossenos e inversas; `explorar/index.html` abriga seus controles.
+- **Professor:** `assets/professores.js` permite escolher tema, nível, quantidade e formato. Use **Imprimir / salvar PDF** e selecione “Salvar como PDF” no navegador. O gabarito pode ser incluído ou omitido. A produção dos PDFs oficiais do projeto permanece sob responsabilidade dos autores.
+- **Progresso de estudo:** `assets/progresso.js` permite marcar capítulos após a ativação voluntária. As marcações ficam no `localStorage` do navegador, na chave `trig:progress:v1`; há botão para apagá-las. O recurso não oferece conta, nuvem ou compartilhamento. Sua descrição foi incorporada à minuta `documentos/PRIVACIDADE.md` e à aba Sobre. A política continua pendente de análise e aprovação em `@@@@`.
+- **Visual:** os estilos dessas funcionalidades ficam ao final de `assets/rea.css`.
 
 ### Estrutura de arquivos atual
 
@@ -23,7 +32,11 @@ TrigTest/
 ├── index.html                         Página Inicial
 ├── assets/
 │   ├── rea.css                        Visual roxo, menus e responsividade
-│   └── rea.js                         Menu móvel, laboratórios e treino
+│   ├── rea.js                         Menu móvel, laboratórios e treino
+│   ├── banco-questoes.js              60 questões e explicações
+│   ├── laboratorios.js                Triângulos e arcos inversos
+│   ├── professores.js                 Gerador de folhas
+│   └── progresso.js                   Busca e progresso voluntário
 ├── estudar/
 │   └── index.html
 ├── explorar/
@@ -43,6 +56,11 @@ TrigTest/
 │   ├── funcoes.html
 │   ├── identidades.html
 │   ├── aplicacoes.html
+│   ├── equacoes.html
+│   ├── inversas.html
+│   ├── ondas.html
+│   ├── complexos.html
+│   ├── historia.html
 │   └── estilo.css
 ├── jogos/
 │   └── missao-quadrantes.html
