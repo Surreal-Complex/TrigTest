@@ -210,3 +210,6 @@ main{min-height:65vh}
 }
 
 .rubric-scroll{overflow-x:auto}.rubric-table{width:100%;border-collapse:collapse;min-width:620px;font-size:.9rem}.rubric-table th,.rubric-table td{text-align:left;vertical-align:top;border:1px solid #dac9ea;padding:12px}.rubric-table thead{background:#e6d8f8}.rubric-table tbody th{color:#503177;background:#f6f0fd}
+
+/* Impede que as sub-abas de Estudar encubram a identificação da seção. */
+#introducao .section-nav{margin-top:12px}
