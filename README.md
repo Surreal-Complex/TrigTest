@@ -16,6 +16,15 @@ A versão reorganizada tem **sete entradas principais** na navegação superior:
 
 Os **links da navegação principal** estão no cabeçalho de cada uma dessas páginas. As **sub-abas** são atalhos para seções dentro da página e os **guias recolhíveis** usam o elemento HTML `<details>`.
 
+### Verificações técnicas e validação humana
+
+- **Testes estáticos automáticos:** `node scripts/validar-site.mjs`, usando Node.js. Conferem caminhos internos, âncoras, sintaxe dos scripts e estrutura das 60 questões. A rotina também roda no GitHub Actions (`.github/workflows/validacao-site.yml`) após alterações na branch `main` e em propostas de alteração.
+- **Página de erro personalizada:** `404.html`, com atalhos para as áreas principais e sem dependências de caminhos relativos que possam falhar em URLs inexistentes.
+- **Mapa do site:** `sitemap.xml`, com URLs das páginas públicas HTML; atualize ao adicionar ou remover páginas.
+- **Checklist humano:** `documentos/GUIA-DE-VALIDACAO-FINAL.md` explica como testar teclado, leitor de tela, celulares, jogos e matemática, além de registrar as verificações que a automação não pode certificar.
+
+**Importante:** testes estruturais passando não comprovam correção matemática de todos os exercícios, acessibilidade WCAG, adequação pedagógica ou conformidade jurídica. Essas revisões precisam de responsáveis humanos.
+
 ### Atualização de 19/11/2026: capítulos e ferramentas adicionais
 
 - **Conteúdos autorais de apoio para revisão:** cinco novos capítulos introdutórios em `conteudos/equacoes.html`, `inversas.html`, `ondas.html`, `complexos.html` e `historia.html`, além de justificativas complementares nos cinco capítulos existentes. Estes textos constituem material de apoio sujeito a revisão matemática e pedagógica, não substituem as apostilas que serão elaboradas pelos autores.
