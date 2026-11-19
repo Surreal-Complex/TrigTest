@@ -1,0 +1,23 @@
+name: Validacao estatica do site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: Conferir links, scripts e questoes
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Obter arquivos
+        uses: actions/checkout@v4
+      - name: Conferir ferramentas
+        run: node --version
+      - name: Executar verificacoes estaticas
+        run: node scripts/validar-site.mjs

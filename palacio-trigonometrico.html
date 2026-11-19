@@ -25,6 +25,7 @@ svg text{font:13px system-ui,sans-serif;fill:var(--fg)}
 #q{margin:8px 0 10px;line-height:1.5;font-size:1.02rem}
 #opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 button{font:inherit;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:12px;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 button:hover{border-color:var(--p1)}
 button.pri{background:var(--p1);color:var(--on);border-color:var(--p1)}
 button.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
@@ -33,10 +34,12 @@ button.bad{background:var(--bad);color:#fff;border-color:var(--bad)}
 #info{font-size:.88rem;color:var(--muted);margin-top:8px;line-height:1.4;min-height:1.4em}
 #msg{margin-top:8px;font-size:.92rem;line-height:1.4}
 #end{text-align:center;padding:20px 8px}
+.back-link{display:inline-block;color:var(--p1);font-size:.9rem;font-weight:750;margin:0 0 11px}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="icon" type="image/svg+xml" href="assets/logo-trigonometria.svg"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"></head>
 <body>
 <main>
+<a class="back-link" href="jogar/index.html">Voltar à área de jogos</a>
 <h1>Palácio Trigonométrico</h1>
 <p class="sub">Resolva os desafios de trigonometria e erga o palácio, uma peça de cada vez.</p>
 <div class="hud"><div>Pontos<b id="score">0</b></div><div>Desafio<b id="round">1/12</b></div><div>Obra<b id="hits">0/12</b></div></div>
@@ -44,10 +47,10 @@ button.bad{background:var(--bad);color:#fff;border-color:var(--bad)}
 <div class="card" id="game">
 <span class="tag" id="tag"></span>
 <div id="fig"></div>
-<div id="q"></div>
-<div id="opts"></div>
-<div id="info"></div>
-<div id="msg"></div>
+<div id="q" role="heading" aria-level="2"></div>
+<div id="opts" role="group" aria-label="Alternativas da questão"></div>
+<div id="info" role="status" aria-live="polite"></div>
+<div id="msg" role="status" aria-live="polite"></div>
 <div class="row"><button id="hb">Dica</button><button class="pri" id="nx" style="display:none">Próximo</button></div>
 </div>
 <div class="card" id="end" style="display:none"></div>
